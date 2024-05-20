@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xây dựng một AWS Network VPC 3 tầng on GIỚI THIỆU VỀ AMAZON EC2</title>
+    <link>/vi/2-awsnetworkvpc/</link>
+    <description>Recent content in Xây dựng một AWS Network VPC 3 tầng on GIỚI THIỆU VỀ AMAZON EC2</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <atom:link href="/vi/2-awsnetworkvpc/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,302 @@
+[
+{
+	"uri": "/",
+	"title": "Build a Three-Tier Architecture for Deploy LAMP STACK Application on AWS",
+	"tags": [],
+	"description": "",
+	"content": "Build a Three-Tier Architecture for Deploy LAMP STACK Application on AWS Overview In this lab, you will learn about building a three-tier architecture with high availability and fault tolerance to deploy a LAMP STACK application on AWS. We will leverage various AWS services using the management console. Contents Introduction Building a Three-Tier AWS Network VPC Creating NAT Gateway and Security Groups Deploying Database and Storage Services Setting Up Servers and Configuring Amazon EFS Deploying the Application Testing Notifications Optional Resource Cleanup "
+},
+{
+	"uri": "/5-setupec2serverandefs/5.1-createbastionhost/",
+	"title": "Create Bastion Host in Public Subnet",
+	"tags": [],
+	"description": "",
+	"content": "Create Bastion Host in Public Subnet Click on the search bar\nType ec2 Under Services, select EC2 In the EC2 Dashboard\nChoose Instances Then select Launch instances In the Launch an instance wizard:\nUnder Name, enter Bastion Host Under Application and OS Images (Amazon Machine Image), select AmazonLinux Then,\nUnder Instance type, choose t2.micro Under Key pair (login), select bastion-lamp-stack Note: If you don\u0026rsquo;t have a Key pair, select Create new key pair\nIn the Network settings section:\nUnder VPC - required, select vpc-Oacb9059f41ab5a37 Under Subnet, choose pub-sub-1a Under Auto-assign public IP, select Enable Under Firewall (security groups), select Select existing security group and choose SSHSecurityGroup Finally, click Launch instance to complete the creation of the Bastion Host.\n"
+},
+{
+	"uri": "/2-awsnetworkvpc/2.3-subnet/2.3.1-createsubnet/",
+	"title": "Create 6 Subnets",
+	"tags": [],
+	"description": "",
+	"content": "Create 6 Subnets In the VPC interface:\nSelect Subnets Click on Create subnet In the Create subnet interface:\nUnder VPC ID, select vpc-Oacb9059f41ab5a37 (lamp-stack-vpc), which is your recently created VPC Then, under Subnet settings, we will create 6 subnets as follows:\nCreate Public Subnet 1: In the Subnet name field, enter pub-sub-1a For Availability Zone, select US East (N. Virginia) / us-east-1a For IPv4 subnet CIDR block, enter 10.0.1.0/24 Under Tags: Enter Name for Key Optionally, enter pub-sub-1a for Value Create Public Subnet 2: In the Subnet name field, enter pub-sub-2b For Availability Zone, select US East (N. Virginia) / us-east-1b For IPv4 subnet CIDR block, enter 10.0.2.0/24 Under Tags: Enter Name for Key Optionally, enter pub-sub-2b for Value Create Private Subnet 3: In the Subnet name field, enter pri-sub-3a For Availability Zone, select US East (N. Virginia) / us-east-1a For IPv4 subnet CIDR block, enter 10.0.3.0/24 Under Tags: Enter Name for Key Optionally, enter pri-sub-3a for Value Create Private Subnet 4: In the Subnet name field, enter pri-sub-4b For Availability Zone, select US East (N. Virginia) / us-east-1b For IPv4 subnet CIDR block, enter 10.0.4.0/24 Under Tags: Enter Name for Key Optionally, enter pri-sub-4b for Value Create Private Subnet 5: In the Subnet name field, enter pri-sub-5a For Availability Zone, select US East (N. Virginia) / us-east-1a For IPv4 subnet CIDR block, enter 10.0.5.0/24 Under Tags: Enter Name for Key Optionally, enter pri-sub-5a for Value Create Private Subnet 6: In the Subnet name field, enter pri-sub-6b For Availability Zone, select US East (N. Virginia) / us-east-1b For IPv4 subnet CIDR block, enter 10.0.6.0/24 Under Tags: Enter Name for Key Optionally, enter pri-sub-6b for Value The subnets have been successfully created as follows:\n"
+},
+{
+	"uri": "/2-awsnetworkvpc/2.4-routetable/2.4.1-publicrt/",
+	"title": "Create and Configure Public Route Table",
+	"tags": [],
+	"description": "",
+	"content": "Create and Configure Public Route Table In the VPC interface:\nSelect Route tables Click on Create route table In the Create route table interface:\nIn the Name - optional field, enter lamp-stack-pub-rt For VPC, select vpc-Oacb9059f41ab5a37 (lamp-stack-vpc) In the Tags section: Enter Name for Key Optionally, enter lamp-stack-pub-rt for Value Finally, click on Create route table Next, we will add the Internet Gateway to the newly created Public Route Table:\nClick on the Routes tab Select Edit routes Under Destination, select 0.0.0.0/0 Under Target, select Internet Gateway Then choose igw-oc134f10ab513a4cd, which is the IGW we created earlier. Finally, click Save changes Note: Before selecting 0.0.0.0/0 under Destination, we need to click Add route.\nAfter adding the route to the Internet, the result will look like this: Now we will associate the 2 Public Subnets we created earlier with this Route Table:\nClick on Subnet associations Select Edit subnet associations Under Available subnets, select pub-sub-2b and pub-sub-1a Finally, click Save associations The result after association will look like this: "
+},
+{
+	"uri": "/2-awsnetworkvpc/2.1-vpc/",
+	"title": "Create and Configure VPC",
+	"tags": [],
+	"description": "",
+	"content": "Create and Configure VPC In this section, we will create a VPC and enable DNS Hostname for that VPC.\nContents Create VPC Enable DNS Hostname "
+},
+{
+	"uri": "/4-deployrdsands3/4.1-createdbsg/",
+	"title": "Create DB Subnet Group",
+	"tags": [],
+	"description": "",
+	"content": "Creating DB Subnet Group Navigate to the search bar.\nEnter rds Under Services, select RDS In the Amazon RDS dashboard,\nChoose Subnet groups Select Create DB subnet group In the Create DB subnet group interface,\nIn Name, enter book-rds-subnet-group In Description, enter book-rds-subnet-group For VPC, select lamp-stack-vpc (vpc-Oacb9059f41ab5a37) Next,\nUnder Availability Zones, select 2 AZs: us-east-1a and us-east-1b Under Subnets, select 2 subnets: subnet-07e1efe93fc1dfbdc (10.0.5.0/24) and subnet-Od218c71f1b18d748 (10.0.6.0/24) Finally,\nDouble-check the selected subnets under Subnets selected. Complete the creation of the subnet group by clicking Create DB Subnet Group created successfully as shown:\n"
+},
+{
+	"uri": "/2-awsnetworkvpc/2.2-internetgateway/2.2.1-createigw/",
+	"title": "Create Internet Gateway",
+	"tags": [],
+	"description": "",
+	"content": "Create Internet Gateway In the VPC interface:\nSelect Internet gateways Click on Create internet gateway In the Create internet gateway interface:\nIn the Name tag field, enter lamp-stack-igw In the Tags section: Enter Name for Key Optionally, enter lamp-stack-igw for Value Finally, click on Create internet gateway We have successfully created the Internet Gateway, but it is currently in a Detached state as it has not been attached to any VPC yet.\n"
+},
+{
+	"uri": "/3-createnatgwandsg/3.1-createnatgw/",
+	"title": "Create NAT Gateway",
+	"tags": [],
+	"description": "",
+	"content": "Create the First NAT Gateway in the Public Subnet in AZ us-east-1a In the VPC interface:\nSelect NAT gateways Click on Create NAT gateway In the Create NAT gateway interface:\nIn the Name - optional field, enter lamp-stack-nat-pub-sub-1a For Subnet, select subnet-09781d02f50504e98 (pub-sub-1a) Check Allocate Elastic IP Continuing,\nIn the Tags section: Enter Name for Key Optionally, enter lamp-stack-nat-pub-sub-1a for Value Finally, click on Create NAT gateway This successfully creates the NAT Gateway. Create the Second NAT Gateway in the Public Subnet in AZ us-east-1b Now, let\u0026rsquo;s create a NAT Gateway in the other Availability Zone.\nIn the Create NAT gateway interface:\nClick on Create NAT gateway Continuing in the Create NAT gateway interface:\nIn the Name - optional field, enter lamp-stack-nat-pub-sub-2b For Subnet, select subnet-03078b6edceb59c7e (pub-sub-2b) Check Allocate Elastic IP Continuing,\nIn the Tags section: Enter Name for Key Optionally, enter lamp-stack-nat-pub-sub-2b for Value Finally, click on Create NAT gateway Now, we have successfully created the second NAT Gateway. Both gateways are in Available state.\n"
+},
+{
+	"uri": "/6-deployapplication/6.1-createtargetgroup/",
+	"title": "Create Target Group",
+	"tags": [],
+	"description": "",
+	"content": "Create Target Group Click on the search bar\nType ec2 Under Services, select EC2 In the EC2 interface\nChoose Target Groups Click Create target group In the Specify group details section\nUnder Choose a target type, select Instances Next,\nFor Target group name, enter lamp-stack-tg For VPC, choose lamp-stack-vpc Leave the remaining fields at their default values For Success codes, enter 200,301,302 For Tags: Key: Name Value - optional: lamp-stack-tg Click Next In the Register targets section\nUnder Available instances, select lamp-stack-setup-server Click Include as pending below Review the Review targets section Click Create target group to complete the creation of the target group Now, the Target Group has been successfully created.\n"
+},
+{
+	"uri": "/2-awsnetworkvpc/2.1-vpc/2.1.1-createvpc/",
+	"title": "Create VPC",
+	"tags": [],
+	"description": "",
+	"content": "Create VPC In the AWS console interface:\nClick on the search bar and type VPC Under Services, select VPC In the VPC interface:\nChoose Your VPCs Click Create VPC In the Create VPC interface:\nUnder Resources to create, select VPC only Under Name tag - optional, enter lamp-stack-vpc Under IPv4 CIDR block, choose IPV4 CIDR manual input Enter 10.0.0.0/16 under IPv4 CIDR Continue,\nUnder IPv6 CIDR block, select No IPv6 CIDR block Under Tags: Enter Name for Key Optionally, enter lamp-stack-vpc for Value Finally, click Create VPC You have successfully created the VPC "
+},
+{
+	"uri": "/1-introduce/",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": "Architecture Overview Description Within the VPC, there are both public and private subnets distributed across 2 availability zones. An Internet Gateway is used to allow communication between instances within the VPC and the Internet. We utilize 2 Availability Zones to ensure high availability and fault tolerance. Other resources such as Nat Gateway, Bastion Host, and Application Load Balancer reside in Public Subnets. Web servers and database servers are placed in Private Subnets to protect them. Nat Gateway enables instances in private app subnets and private data subnets to access the internet. We employ MYSQL database and EC2 Instances to host the website. Application Load Balancer is used to distribute web traffic across Auto Scaling Groups of EC2 instances in multiple AZs. Auto Scaling Group ensures the website is highly available, scalable, fault-tolerant, and flexible. AWS S3 is utilized for storing web application source code, and IAM Role is created to grant EC2 permission to download the source code from AWS S3. We will deploy our website on one EC2 instance first, then use this instance to create an AMI. Utilize AWS WAF (Web Application Firewall) to protect the application, and use CloudFront service to enhance performance and reduce latency when users access the website. Route 53 can be used to register the domain name and create a record set. Availability Zone An Availability Zone (AZ) is a subset of data centers within a Region and is defined based on geographical location. Within an AZ, there can be one or more subnets, but a subnet can only reside in a single AZ and cannot span across multiple AZs.\nSubnet A Subnet is a segment of the IP address range that you use when you create an Amazon VPC, providing a direct network segment for AWS resources to operate within it, such as Amazon EC2, Amazon RDS, etc. Subnets are also defined by a CIDR block and must be within the VPC\u0026rsquo;s CIDR.\nSubnets are categorized as Public, Private, or VPN-only.\nPublic subnets have a route table (discussed later) that routes traffic within the subnet to the VPC IGW (also discussed later). Private subnets lack this route table for routing traffic to the VPC IGW. VPN-only subnets are those that have a route table routing traffic to the VPG of Amazon VPC (discussed later). Regardless of the subnet type, the internal IP address range of the subnet is always private (meaning it cannot be directly connected to from outside the Internet).\nRoute Table A Route Table, also known as a routing table, provides routing instructions and is assigned to subnets. For example, when you create a VPC with a 10.10.0.0/16 network class and 2 subnets 10.10.1.0/24,10.10.2.0/24 then each subnets will be assigned 1 default route table by default. Inside the route table will have route entry destination:10.10.0.0/16 target:local. This route entry shows that the resources created within the same VPC can connect to each other.\nInternet Gateway An Internet Gateway (IGW) is an Amazon VPC component that enables AWS resources within the VPC, specifically EC2, to communicate with the Internet. The IGW can scale horizontally, ensuring redundancy and high availability. It acts as a target in the Amazon VPC\u0026rsquo;s route table, allowing traffic to be routed out to the Internet by translating the EC2\u0026rsquo;s network address into the assigned Public IP address.\nNAT Gateway By default, EC2s running in a Private subnet do not have the ability to communicate with the Internet through the IGW. Hence the problem arises when that EC2 needs to access the Internet for applying security updates, downloading patches, or updating application software. Capturing that need, AWS provides 2 methods to allow EC2s inside Private subnets to access the Internet, that is NAT Instance and NAT Gateway. For ordinary cases, we should use NAT Gateway instead of NAT Instance. NAT Gateway ensures higher availability and higher bandwidth, while requiring less administrative effort than NAT Instance.\nLoad Balancer A Load Balancer is a tool that can distribute exchanged data traffic to AWS resources (specifically in this lab are EC2 Instances) within the Target Group.\nTarget Group A Target Group is a group of AWS resource components that will receive distributed data traffic transmitted by the Load Balancer.\nAmazon CloudFront Amazon CloudFront is a content delivery network (CDN) service built to ensure high performance, security for users.\nAmazon RDS Amazon RDS is a managed database service that enables you to automate provisioning, operating, and scaling a relational database on AWS\u0026rsquo;s cloud computing platform.\nAWS WAF (Web Application Firewall) AWS WAF (Web Application Firewall) is a network security service that helps protect your web applications from common web exploits, safeguard important data, and ensure application availability.\n"
+},
+{
+	"uri": "/5-setupec2serverandefs/5.2-createec2setupserver/",
+	"title": "Create EC2 Setup Server in Private Subnet",
+	"tags": [],
+	"description": "",
+	"content": "Create EC2 Setup Server in Private Subnet Click on the search bar\nType ec2 Under Services, select EC2 In the EC2 Dashboard\nChoose Instances Then select Launch instances In the Launch an instance wizard:\nUnder Name, enter lamp-stack-setup-server Under Application and OS Images (Amazon Machine Image), select AmazonLinux Then,\nUnder Instance type, choose t2.micro Under Key pair (login), select bastion-lamp-stack Note: If you don\u0026rsquo;t have a Key pair, select Create new key pair\nIn the Network settings section:\nUnder VPC - required, select vpc-Oacb9059f41ab5a37 (lamp-stack-vpc) Under Subnet, choose subnet-05c2f5e92fd59e436 (pri-sub-3a) Under Auto-assign public IP, select Disable Under Firewall (security groups), select Select existing security group and choose WebserverSecurityGroup, DatabaseSecurityGroup, and ALBSecurityGroup In the Configure storage section, keep the default values.\nFinally, click Launch instance to complete the creation of the EC2 Setup Server. In the Instances section, you can see that the EC2 Setup Server has been successfully created.\n"
+},
+{
+	"uri": "/2-awsnetworkvpc/2.2-internetgateway/2.2.2-attachtovpc/",
+	"title": "Attach Internet Gateway to VPC",
+	"tags": [],
+	"description": "",
+	"content": "Attach Internet Gateway to VPC At the newly created IGW lamp-stack-igw\nClick on the Actions dropdown menu and select Attach to VPC In the Attach to VPC interface\nUnder Available VPCs, select vpc-Oacb9059f41ab5a37 - lamp-stack-vpc Click Attach internet gateway Note: vpc-Oacb9059f41ab5a37 is your VPC ID.\nWe have successfully attached the Internet Gateway to the VPC. The State will now show Attached.\n"
+},
+{
+	"uri": "/2-awsnetworkvpc/",
+	"title": "Build a Three-Tier AWS Network VPC",
+	"tags": [],
+	"description": "",
+	"content": "Build a Three-Tier AWS Network VPC In this section, we will build a Three-Tier AWS Network VPC as follows:\nThe VPC will be created in 2 availability zones with 1 public subnet and 2 private subnets in each AZ. 1 Internet Gateway will be used to allow communication between instances within the VPC and the Internet. We will utilize 2 Availability Zones to ensure high availability and fault tolerance. Resources such as Nat Gateway, Bastion Host, and Application Load Balancer will be deployed in Public subnets. We will place web servers and database servers in the Private Subnets to protect them. The Public Route Table will be associated with the public subnets and route traffic to the Internet through the Internet Gateway. The Main Route Table will be associated with the private subnets. Contents Create and Configure VPC Create and Attach Internet Gateway (IGW) to VPC Create and Configure Subnets Create and Configure Route Tables "
+},
+{
+	"uri": "/2-awsnetworkvpc/2.2-internetgateway/",
+	"title": "Create and Attach Internet Gateway (IGW) to VPC",
+	"tags": [],
+	"description": "",
+	"content": "Create and Attach Internet Gateway (IGW) to VPC In this section, we will create and attach an Internet Gateway (IGW) to the VPC created in the previous section.\nContents Create Internet Gateway Attach Internet Gateway to VPC "
+},
+{
+	"uri": "/2-awsnetworkvpc/2.4-routetable/2.4.2-mainprivatert/",
+	"title": "Create and Configure Main Route Table",
+	"tags": [],
+	"description": "",
+	"content": "Create and Configure Main Route Table When we create a VPC, a default Route Table is created, and it is private. We will refer to it as the Main Route Table. In the Route tables interface:\nSelect rtb-05a6febb5380e833f as mentioned Click on Subnet associations Select Edit subnet associations Under Available subnets, select the private subnets including pri-sub-3a, pri-sub-4b, pri-sub-5a, and pri-sub-6b Finally, click Save associations The result after association will look like this: "
+},
+{
+	"uri": "/3-createnatgwandsg/3.2-createprivatert/",
+	"title": "Create and Configure Private Route Table",
+	"tags": [],
+	"description": "",
+	"content": "Create and Configure Private Route Table In the VPC interface:\nSelect Route tables Click Create route table In the Create route table interface:\nFor Name - optional, enter lamp-stack-pri-rt-1 For VPC, select vpc-Oacb9059f41ab5a37 (lamp-stack-vpc) Under Tags: For Key, enter Name For Value - optional, enter lamp-stack-pri-rt-1 Finally, click Create route table Now, let\u0026rsquo;s associate the 2 Private Subnets in AZ us-east-1a that we created earlier with this Private Route Table.\nClick on Subnet associations Select Edit subnet associations Under Available subnets, select pri-sub-3a and pri-sub-5a Finally, click Save associations Next, let\u0026rsquo;s add the NAT Gateway in AZ us-east-1a to this Private Route Table that we just created.\nClick on Routes Select Edit routes For Destination, select 0.0.0.0/0 For Target, select NAT Gateway Then select nat-01aa9ae6861e6759a (lamp-stack-nat-pub-sub-1a), which is the NAT Gateway we created in the previous step. Finally, click Save changes Note: Before selecting 0.0.0.0/0 under Destination, we need to click Add route.\nLet\u0026rsquo;s continue by creating the second Private Route Table. In the Create route table interface:\nFor Name - optional, enter lamp-stack-pri-rt-2 For VPC, select vpc-Oacb9059f41ab5a37 (lamp-stack-vpc) Under Tags: For Key, enter Name For Value - optional, enter lamp-stack-pri-rt-2 Finally, click Create route table Next, we will add the NAT Gateway in AZ us-east-1b to the second Private Route Table that we just created.\nClick on Routes Select Edit routes For Destination, select 0.0.0.0/0 For Target, select NAT Gateway Then select nat-052de2c3601c08459 (lamp-stack-nat-pub-sub-2b), which is the second NAT Gateway we created in the previous step. Finally, click Save changes Now, let\u0026rsquo;s associate the 2 Private Subnets in AZ us-east-1b that we created earlier with this second Private Route Table.\nClick on Subnet associations Select Edit subnet associations Under Available subnets, select pri-sub-4b and pri-sub-6b Finally, click Save associations The result after creating the two Private Route Tables is shown below:\n"
+},
+{
+	"uri": "/6-deployapplication/6.2-createalb/",
+	"title": "Create Application Load Balancer",
+	"tags": [],
+	"description": "",
+	"content": "Create Application Load Balancer In the EC2 dashboard,\nSelect Load Balancers Click on Create load balancer In the Application Load Balancer section,\nClick Create Next,\nIn the Load balancer name field, enter lamp-stack-alb Leave the Scheme and IP address type to default In the Network mapping section,\nUnder VPC, select lamp-stack-vpc In Mappings, Choose us-east-1a (use1-az6). Subnet: subnet-09781d02f50504e98, named pub-sub-1a Choose us-east-1b (use1-az1). Subnet: subnet-03078b6edceb59c7e, named pub-sub-2b In the Security groups section,\nSelect ALBSecurityGroup under Security groups In the Listeners and routing section,\nUnder Default action, select lamp-stack-tg Next,\nIn Load balancer tags - optional: Enter Name for Key Optionally, enter lamp-stack-alb for Value Finally, click Create load balancer to complete the creation of the Application Load Balancer.\nYou have successfully created the Application Load Balancer.\nYou can copy the DNS name from the image above to access the application via ALB.\n"
+},
+{
+	"uri": "/4-deployrdsands3/4.2-rdsintance/",
+	"title": "Creating RDS Instance",
+	"tags": [],
+	"description": "",
+	"content": "Creating RDS Instance In the Amazon RDS dashboard,\nSelect Databases Choose Create database In the Create database interface,\nUnder Choose a database creation method, select Standard create Under Engine options, select MySQL Under Edition, keep all fields as default Next,\nUnder Templates, choose Dev/Test Under Availability and durability, select Multi-AZ DB instance In the Settings section,\nFor DB instance identifier, enter book-rds-database For Master username, enter admin For Master password, enter your database password and confirm it in Confirm master password In the Instance configuration section,\nUnder DB instance class, select Burstable classes (includes t classes) and choose db.t3.micro In the Storage section,\nFor Allocated storage, enter 22 For Storage autoscaling, select Enable storage autoscaling In the Connectivity section,\nUnder Compute resource, select Don\u0026rsquo;t connect to an EC2 compute resource Under Network type, select IPv4 Under Virtual private cloud (VPC), select lamp-stack-vpc (vpc-Oacb9059f41ab5a37) Under DB subnet group, choose book-rds-subnet-group Under Public access, select No Under VPC security group (firewall), choose Choose existing Under Existing VPC security groups, select DatabaseSecurityGroup Under Certificate authority, choose rds-ca-rsa2048-g1 (default) In the Database authentication section, leave it as Password authentication\nUnder Monitoring, select Enable Enhanced Monitoring\nContinuing, in the Database options section,\nFor Initial database name, enter e_bookstore For Backup, select Enable automated backups Leave the rest of the fields with their default values Finally, select Create database\nWe have successfully created the database.\n"
+},
+{
+	"uri": "/2-awsnetworkvpc/2.1-vpc/2.1.2-enablednshostname/",
+	"title": "Enable DNS Hostname",
+	"tags": [],
+	"description": "",
+	"content": "Enable DNS Hostname Navigate back to the VPC interface:\nSelect Your VPCS Choose the newly created VPC lamp-stack-vpc Click on the Actions dropdown menu and select Edit VPC settings In the Edit VPC settings interface:\nUnder DNS settings, select Enable DNS resolution and Enable DNS hostnames Finally,\nClick Save "
+},
+{
+	"uri": "/2-awsnetworkvpc/2.3-subnet/2.3.2-enableipv4pubsubnet/",
+	"title": "Enable IPv4 for 2 Public Subnets",
+	"tags": [],
+	"description": "",
+	"content": "Enable IPv4 for 2 Public Subnets In the Subnets interface:\nSelect the recently created pub-sub-1a Click on the Actions dropdown menu and select Edit subnet settings Then,\nUnder Auto-assign IP settings, select Enable auto-assign public IPv4 address Click Save to complete Similarly, for the other Public Subnet,\nSelect the recently created pub-sub-2b Click on the Actions dropdown menu and select Edit subnet settings Then,\nUnder Auto-assign IP settings, select Enable auto-assign public IPv4 address Click Save to complete "
+},
+{
+	"uri": "/5-setupec2serverandefs/5.3-configureec2/",
+	"title": "Configure the EC2 Setup Server",
+	"tags": [],
+	"description": "",
+	"content": "Access the EC2 Setup Server through Bastion Host In the EC2 instance interface, select Bastion Host and then click Connect.\nChoose EC2 Instance Connect. Then click Connect. You\u0026rsquo;ll see that you have successfully accessed the Bastion Host.\nType ping google.com to check the internet connection, the result is as shown in the images below.\nType sudo nano ssh-key.pem to create an SSH key to access the EC2 Setup Server.\nThe content of the ssh-key.pem file will be in the key pair file that we selected while creating the EC2 Setup Server. We\u0026rsquo;ll copy it here, then save and exit the file.\nType sudo chmod 400 ssh-key.pem to allow reading the contents of this file, but not writing to it or executing it.\nFinally, type sudo ssh -i \u0026quot;ssh-key.pem\u0026quot; ec2-user@10.0.3.239 to access the EC2 Setup Server.\nNote: 10.0.3.239 is the private IPv4 address of the EC2 Setup Server. So, make sure to replace it with your server\u0026rsquo;s IP address!\nType ping google.com again to check the internet connection, the result is as shown below.\nUpdate Version and Install Necessary Software on EC2 Setup Server Next, we will proceed to update the version and install essential software, including Apache, PHP, and MySQL. sudo yum update -y sudo yum install php -y sudo yum install php-mysqli -y sudo yum install mariadb105 -y Once completed, we will activate these services and configure them to start automatically after system reboot. sudo systemctl start httpd sudo systemctl enable httpd sudo systemctl start php-fpm sudo systemctl enable php-fpm Then, we will create some permissions to access the Apache directory. sudo usermod -a -G apache ec2-user sudo chown -R ec2-user:apache /var/www/html sudo chown -R apache:apache /var/www/html Attach EFS shared drive to the Web server First, we will open the file /etc/fstab in the Nano editor with root user privileges.\nEnter sudo nano /etc/fstab Append the following line to the end of the file, then save and exit the file.\nfs-061c0cc037d521abf.efs.us-east-1.amazonaws.com:/ /var/www/html/ nfs defaults,\\_netdev 0 0 Note: Make sure to replace fs-061c0cc037d521abf.efs.us-east-1.amazonaws.com with the DNS of your EFS directory. If you\u0026rsquo;re unsure where to find it, refer to the content at the end of section 4.5.\nFinally, we enter the following command once again: sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-061c0cc037d521abf.efs.us-east-1.amazonaws.com:/ /var/www/html/ Checking the result, we can see that the EFS drive has been successfully mounted.\n"
+},
+{
+	"uri": "/6-deployapplication/6.3-createami/",
+	"title": "Create AMI",
+	"tags": [],
+	"description": "",
+	"content": "Create AMI In the EC2 dashboard,\nSelect Instances Choose lamp-stack-setup-server Click on the Actions tab, select Image and templates Choose Create image In the Create image interface,\nIn the Image name field, enter Bookstore AMI In the Image description field, enter Bookstore AMI Then,\nIn the Tags - optional section: Check Tag image and snapshots together Enter Name in the Key field Optionally, enter Bookstore AMI in the Value field Finally, click Create to complete the AMI creation process.\nYou have successfully created the AMI.\n"
+},
+{
+	"uri": "/2-awsnetworkvpc/2.3-subnet/",
+	"title": "Create and Configure Subnets",
+	"tags": [],
+	"description": "",
+	"content": "Create and Configure Subnets In this section, we will create 6 subnets, including 2 Public Subnets and 4 Private Subnets. Afterward, we will enable IPv4 for the 2 Public Subnets.\nContents Create 6 Subnets Enable IPv4 for 2 Public Subnets "
+},
+{
+	"uri": "/3-createnatgwandsg/",
+	"title": "Create NAT Gateway and Security Groups",
+	"tags": [],
+	"description": "",
+	"content": "Create NAT Gateway and Security Groups In this section, we will create a NAT Gateway and Security Groups.\nContents Create NAT Gateway Create and Configure Private Route Table Create Security Groups "
+},
+{
+	"uri": "/4-deployrdsands3/4.3-creates3/",
+	"title": "Create S3 Bucket and Upload Source Code",
+	"tags": [],
+	"description": "",
+	"content": "Create S3 Bucket Start by clicking on the search bar\nType s3 Under Services, select S3 In the Amazon S3 interface,\nChoose Create bucket In the Create bucket interface,\nUnder AWS Region, select US East (N. Virginia) us-east-1 For Bucket type, choose General purpose In Bucket name, enter book-application-bucket Next,\nFor Object Ownership, select ACLs disabled (recommended) Leave the remaining fields with default values and finally select Create bucket Bucket creation completed as shown in the image\nUpload Source code to S3 Bucket Access the newly created Bucket and select Upload\nChoose the Source code of the LAMP-Stack project\nCompletion of the upload process\n"
+},
+{
+	"uri": "/3-createnatgwandsg/3.3-createsecuritygroup/",
+	"title": "Create Security Groups",
+	"tags": [],
+	"description": "",
+	"content": "Create Security Groups for Application Load Balancer Click on the search bar\nType ec2 Under Services, select EC2 In the EC2 dashboard,\nSelect Security Groups Click Create security group Configure the first Security Group for the Application Load Balancer (ALB)\nEnter Security Group name: ALBSecurityGroup Enter Description: This is the security group that we will add to the application load balancer Select the appropriate VPC: vpc-Oacb9059f41ab5a37 (lamp-stack-vpc) Configure Inbound rules\nSelect Type: HTTP and Source: Anywhere-IPv4 (0.0.0.0/0) Click Add rule to add another rule Select Type: HTTPS and Source: Anywhere-IPv4 (0.0.0.0/0) Review Outbound rules and click Create security group\nCreating Security Groups for Bastion Host in the Public Subnet Configure the second Security Group for the Bastion Host\nEnter Security Group name: SSHSecurityGroup Enter Description: This is the security group that I will use to Bastion to ssh into my EC2 instance in the private subnet Select the appropriate VPC: vpc-Oacb9059f41ab5a37 (lamp-stack-vpc) Configure Inbound rules\nSelect Type: SSH and Source: Custom (0.0.0.0/0) Review Outbound rules and click Create security group Creating Security Group for Servers in the Private Subnet Configure the third Security Group for the Web servers\nEnter Security Group name: WebserverSecurityGroup Enter Description: This is the security group that we will add to the web servers in the private app subnets Select the appropriate VPC: vpc-Oacb9059f41ab5a37 (lamp-stack-vpc) Configure Inbound rules\nSelect Type: SSH and Source: Custom (sg-0e83ad52ce033e305). sg-0e83ad52ce033e305 is the ID of SSH Security Group. Select Type: HTTP and Source: Custom (sg-027df2808d1cc8947). sg-027df2808d1cc8947 is the ID of ALB Security Group. Select Type: HTTPS and Source: Custom (sg-027f2808d1cc8947). sg-027df2808d1cc8947 is the ID of ALB Security Group. Check Outbound rules and select Create security group Creating Security Groups for RDS Instance Configure the Security group for the RDS Instance containing the database.\nIn Security Group name, enter DatabaseSecurityGroup In Description, enter This is the security group that I will add to the RDS instance in the private data subnet For VPC, select vpc-Oacb9059f41ab5a37 (lamp-stack-vpc) Next, configure Inbound rules.\nSelect Type: MYSQL/Aurora and Source: Custom (sg-050c7d7dfdd96977c). sg-050c7d7dfdd96977c is the ID of the Web Server Security Group. Check Outbound rules and select Create security group Creating Security Groups to Allow NFS Access to Web Server Processing in the Private Subnet Configure the Security group to allow NFS access to web server processing.\nIn Security Group name, enter EFSSecurityGroup In Description, enter Allow NFS access Private App Instances For VPC, select vpc-Oacb9059f41ab5a37 (lamp-stack-vpc) Next, configure Inbound rules.\nSelect Type: NFS and Source: Custom (sg-050c7d7dfdd96977c). sg-050c7d7dfdd96977c is the ID of the Web Server Security Group. Check Outbound rules and select Create security group "
+},
+{
+	"uri": "/2-awsnetworkvpc/2.4-routetable/",
+	"title": "Create and Configure Route Tables",
+	"tags": [],
+	"description": "",
+	"content": "Create and Configure Route Tables In this section, we will create route tables for our VPC to manage the routing of network traffic. Specifically, we will set up a Public Route Table to enable communication with the Internet through an Internet Gateway, and a Main Route Table to handle internal communication within the VPC.\nContents Create and Configure Public Route Table Create and Configure Main Route Table "
+},
+{
+	"uri": "/4-deployrdsands3/4.4.-createiamands3policy/",
+	"title": "Create IAM Role with S3 Policy",
+	"tags": [],
+	"description": "",
+	"content": "Create IAM Role with S3 Policy Click on the search bar\nType iam Under Services, select IAM In the Identity and Access Management (IAM) interface\nChoose Roles Then select Create role In the Select trusted entity section\nUnder Trusted entity type, choose AWS service Next,\nUnder Service or use case, select EC2 Then click Next to proceed In the Add permissions section\nUse the search bar and look for AmazonS3FullAccess Click on the identified Policy name Then click Next to proceed In the Name, review, and create section\nUnder Role name, enter WS1-IAM-role-S3 Under Description, enter Allows EC2 instances to call AWS services on your behalf. Finally, click Create role to complete the IAM Role creation.\n"
+},
+{
+	"uri": "/6-deployapplication/6.4-createlaunchtemp/",
+	"title": "Create Launch Template",
+	"tags": [],
+	"description": "",
+	"content": "Create Launch Template In the EC2 dashboard,\nSelect Launch Templates Choose Create launch template In the Launch template name and description section,\nIn the Launch template name - required field, enter Bookstore-launch-template In the Template version description field, enter Launch Template For ASG Under Auto Scaling guidance, select Provide guidance to help me set up a template that I can use with EC2 Auto Scaling In the Template tags section: Enter Name in the Key field Optionally, enter Bookstore-launch-template in the Value field In the Application and OS Images (Amazon Machine Image) - required section,\nUnder My AMIs, select Owned by me Choose the recently created Bookstore AMI under Amazon Machine Image (AMI). In the Instance type section,\nChoose t2.micro under Instance type. In the Key pair (login) section,\nOptionally, you may skip selecting a key pair by choosing Don\u0026rsquo;t include in launch template. In the Network settings section,\nUnder Firewall (security groups), select Select existing security group Choose WebserverSecurityGroup under Common security groups Click Create launch template You have successfully created the Launch Template.\n"
+},
+{
+	"uri": "/4-deployrdsands3/",
+	"title": "Database and Storage Service Deployment",
+	"tags": [],
+	"description": "",
+	"content": "Database and Storage Service Deployment In this section, we will configure important services such as databases and storage. Firstly, we will create a DB Subnet Group for the database to ensure a secure network environment. Next, we will create an RDS Instance and adjust technical settings as required. Then, we will create an S3 Bucket to store the application source code and upload necessary files. To manage access permissions to the S3 bucket, we need to create an IAM role with appropriate policies. Finally, we will deploy an EFS file system to store and share data among EC2 instances.\nContents Create DB Subnet Group Create RDS Instance Create S3 Bucket and Upload Source Code Create IAM Role and S3 Policy Create EFS File System "
+},
+{
+	"uri": "/5-setupec2serverandefs/5.4-downloadsourcecodes3/",
+	"title": "Download Source Code from S3 to EC2 Setup Server",
+	"tags": [],
+	"description": "",
+	"content": "Attach IAM Role to EC2 Setup Server In the Instances interface:\nSelect lamp-stack-setup-server. Click on Actions dropdown menu. Choose Security. Select Modify IAM role. In the Modify IAM role interface:\nUnder IAM role, select WS1-IAM-role-S3. Click Update IAM role. Download Source Code from S3 to EC2 Setup Server On the EC2 Setup Server, we will download the application\u0026rsquo;s Source code from the S3 Bucket by executing the command: sudo aws s3 sync s3://book-application-bucket /var/www/html Afterwards, access the directory /var/www/html to verify that the Source download process was successful.\ncd /var/www/html ls -l Note: Replace book-application-bucket with the name of the Bucket you created in the previous step.\nNext, we will unzip the downloaded zip file from S3 and copy it into the html directory. sudo unzip FCJ2024-sourcecode-wsl.zip sudo cp -R FCJ2024-sourcecode-ws1/* /var/www/html/ "
+},
+{
+	"uri": "/6-deployapplication/6.5-createasg/",
+	"title": "Create Autoscaling Group",
+	"tags": [],
+	"description": "",
+	"content": "Create Autoscaling Group In the EC2 interface:\nSelect Auto Scaling Groups Choose Create Auto Scaling group In the Choose launch template or configuration section:\nIn the Auto Scaling group name field, enter bookstore-asg Under Launch template, select Bookstore-launch-template, which was created in the previous step. Click Next to proceed. In the Choose instance launch options section:\nUnder VPC, select vpc-Oacb9059f41ab5a37 (lamp-stack-vpc) Under Availability Zones and subnets, select us-east-1a | subnet-05c2f5e92fd59e436 (pri-sub-3а) and us-east-1b | subnet-08f6c0fba219ec914 (pri-sub- X4b) Click Next to proceed. In the Configure advanced options section:\nUnder Load balancing, select Attach to an existing load balancer Under Attach to an existing load balancer, choose Choose from your load balancer target groups Under Existing load balancer target groups, select lamp-stack-tg | HTTP Leave the remaining fields as default. Under Monitoring, select Enable group metrics collection within CloudWatch Click Next to proceed. In the Configure group size and scaling - optional section:\nIn the Desired capacity field, enter 2 In the Min desired capacity field, enter 2 In the Max desired capacity field, enter 4 Under Automatic scaling - optional, select Target tracking scaling policy In the Instance warmup field, enter 300 Click Next to proceed. In the Add notifications section, we will add a notification for incidents regarding the Web application instances:\nIn the Send a notification to field, enter cloud-watch-alarm-bookstore-topic In the With these recipients field, enter 0521.20nn@gmail.com, your desired email address for notifications. Under Event types, select all relevant event types. Click Next to proceed. In the Add tags - optional section:\nUnder Tags: Enter Name for Key Optionally, enter bookstore-asg for Value Click Next to proceed. In the Review section, review the provided information once more:\nClick Create Auto Scaling group to complete the process. Thus, we have successfully created the Autoscaling Group.\nAccessing the EC2 Instance interface, we can see that 2 Web application servers are now active.\n"
+},
+{
+	"uri": "/5-setupec2serverandefs/",
+	"title": "Setup and Configure Servers",
+	"tags": [],
+	"description": "",
+	"content": "Setup and Configure Servers In this section, we will proceed with the process of setting up and configuring servers. Firstly, we will create a Bastion Host in the Public Subnet, allowing secure access to the application servers in the Private Subnet. Next, an EC2 Setup Server will be created in the Private Subnet to prepare for the application deployment. Once configured, we will download source code from an S3 Bucket onto the EC2 Setup Server and update the database into the RDS Instance.\nContents Create Bastion Host in Public Subnet Create EC2 Setup Server in Private Subnet Configure EC2 Setup Server Download Files from S3 onto EC2 Setup Server Update Database into RDS Instance "
+},
+{
+	"uri": "/4-deployrdsands3/4.5-createefsfilesystem/",
+	"title": "Create EFS File System",
+	"tags": [],
+	"description": "",
+	"content": "Create EFS File System Click on the search bar\nType efs Under Services, select EFS In the Elastic File System interface\nClick Create file system In the Create file system section\nSelect Customize In the File system settings section\nUnder Name - optional, enter bookstore-efs For File system type, choose Regional Enable automatic backups under Automatic backups Leave other options at default values and click Next to proceed In the Network access section\nUnder Virtual Private Cloud (VPC), select vpc-Oacb9059f41ab5a37 For Mount targets, Choose us-east-1a for Availability zone and EFSSecurityGroup for Security groups Choose us-east-1b for Availability zone and EFSSecurityGroup for Security groups Note: To add a new Target, click on Add mount target\nClick Next to proceed\nIn the Review and create section, click Create File System to complete the EFS File System creation.\nDNS name Make sure to note down the value in DNS name for later use in attaching the drive to the web server.\n"
+},
+{
+	"uri": "/5-setupec2serverandefs/5.5-updatedbtordsinstance/",
+	"title": "Update Database to RDS Instance",
+	"tags": [],
+	"description": "",
+	"content": "Update Database to RDS Instance First, we need to go to the Amazon RDS interface, access the Database of the application, and copy the Endpoint as shown in the image below:\nIn the EC2 Setup Server, we will access RDS to update the Database using the following command:\nmysql -h book-rds-database.corloppcovr8.us-east-1.rds.amazonaws.com -P 3306 -u admin -p Note: book-rds-database.corloppcovr8.us-east-1.rds.amazonaws.com is your RDS endpoint that you copied in step 1.\nEnter the command to check all existing databases. We can see e_bookstore is the database of the application that we created earlier during the RDS Instance setup. show databases; Next, we will select this database to work on it by entering the command: USE e_bookstore; We will execute SQL statements from the file CreateDB.sql located at /var/www/html/sql/ into the RDS. The CreateDB.sql file will create tables, indexes, and procedures. SOURCE /var/www/html/sql/CreateDB.sql Proceed to execute SQL statements from the file insertDB.sql located at /var/www/html/sql/. The insertDB.sql file inserts new records into existing tables in the database. Configuring the db_conn.php file In the EC2 Setup Server, we will access the db_conn.php file in the Source code downloaded from S3. Navigate to the directory /var/www/html and enter: sudo nano db_conn.php Edit the values as follows: At the variable sName with the value book-rds-database.corloppcovr8.us-east-1.rds.amazonaws.com which is your RDS endpoint copied in step 1. At the variable uName with the value admin which is the Database login username. At the variable pass with the value 12345678 which is your password. At the variable db_name with the value e_bookstore which is the database of the application. Then save and exit the file.\n"
+},
+{
+	"uri": "/6-deployapplication/",
+	"title": "Deploy Application",
+	"tags": [],
+	"description": "",
+	"content": "Deploy Application In this section, we will create an Application Load Balancer to distribute traffic and route requests from users to EC2 application servers. Creating an AMI and Launch Template simplifies the deployment process, while the Auto Scaling Group automatically scales up or down the number of EC2 instances based on the load. Finally, we will create a CloudFront distribution and Web ACL to enhance the security and performance of the application.\nContents Create Target Group Create Application Load Balancer Create AMI Create Launch Template Create Auto Scaling Group Create CloudFront and Web ACL "
+},
+{
+	"uri": "/6-deployapplication/6.6-createcloudfrontandwaf/",
+	"title": "Create CloudFront and Web ACL",
+	"tags": [],
+	"description": "",
+	"content": "Create CloudFront Click on the search bar\nType cloudfront Under Services, select CloudFront In the CloudFront interface\nClick Create a CloudFront distribution In the Origin section\nUnder Origin domain, select lamp-stack-alb-541405871.us-east-1.elb.amazonaws.com Under Protocol, select HTTP Only Leave other fields as default In the Default cache behavior section\nUnder Compress objects automatically, select Yes Under Viewer protocol policy, select HTTP and HTTPS Under Allowed HTTP methods, select GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE Under Cache key and origin requests, select Cache policy and origin request policy (recommended) Leave other fields as default Leave other fields as default Click Create distribution to finish creating the CloudFront Distribution CloudFront Distribution creation is successful.\nCopy the content under Distribution domain name and paste it into your browser. The image below shows the Web application running with the new domain from CloudFront. Create Web ACL Click on the search bar\nType waf Under Services, select WAF \u0026amp; Shield In the WAF \u0026amp; Shield interface\nClick Getting started Click Create web ACL In the Describe web ACL and associate it to AWS resources section\nUnder Resource type, select Amazon CloudFront distributions Under Name, enter bookstore-app Under Description - optional, enter protect my application Under CloudWatch metric name, enter bookstore-app Under Associated AWS resources - optional, click Add AWS resources Under Resource type, select CloudFront Distribution and select the resource created in the previous step E2H26TUZ72XRKT - d22fsOdgzskx5x.cloudfront.net Click Add Click Next to proceed In the Add rules and rule groups section\nUnder Rules, click Add rules and select Add managed rule groups Select AWS managed rule groups Under Free rule groups, select Add to web ACL for the following sections:\nAmazon IP reputation list Anonymous IP list SQL database Click Add rule Leave the remaining settings as default, then select Create web ACL to complete the creation of the Web ACL.\nWe have successfully created the Web ACL.\n"
+},
+{
+	"uri": "/7-testnotification/",
+	"title": "Check Notifications",
+	"tags": [],
+	"description": "",
+	"content": "Check Notifications Let\u0026rsquo;s assume an EC2 Web Server encounters an issue by being terminated, and let\u0026rsquo;s observe receiving the notification about this incident via the provided email.\nIn the EC2 dashboard:\nSelect Instances Choose a Web Server instance bookstore-asg From the Instance state dropdown, select Terminate instance In the Terminate instance? prompt, select Terminate\nWait for a moment, then check the registered email. You will find an email sent with the following content:\n"
+},
+{
+	"uri": "/8-optional/",
+	"title": "Optional",
+	"tags": [],
+	"description": "",
+	"content": "Optional Contents Create Route53 Create AMI for Bastion Host Create Launch Template for Bastion Host Create Autoscaling Group for Bastion Host "
+},
+{
+	"uri": "/9-cleanup/",
+	"title": "Cleanup Resources",
+	"tags": [],
+	"description": "",
+	"content": "Clean up CloudFront Access the CloudFront interface:\nSelect Distributions Choose E2H26TUZ72XRKT Select Disable In the Disable distribution section:\nChoose Disable Once the Status is Disabled:\nSelect E2H26TUZ72XRKT again Choose Delete In the Delete distribution section:\nChoose Delete Cleanup of CloudFront is completed.\nClean up RDS Instance Access the Amazon RDS interface:\nSelect Databases Choose book-rds-database From the Actions dropdown menu, select Delete Uncheck Create final snapshot and Retain automated backups Check I acknowledge that upon instance deletion, automated backups, including system snapshots and point-in-time recovery, will no longer be available. In the confirm deletion field, enter delete me Choose Delete Wait for a while for the Database deletion to complete. In the Amazon RDS interface:\nSelect Subnet groups Choose book-rds-subnet-group Select Delete In the Delete book-rds-subnet-group DB subnet group section:\nChoose Delete Subnet groups cleanup is completed. Clean up Auto Scaling Group Access the EC2 interface:\nSelect Auto Scaling Groups Choose 2 Auto Scaling Groups bastion-host-asg and bookstore-asg From the Actions dropdown menu, select Delete In the Delete 2 Auto Scaling groups section:\nIn the confirm deletion field, enter delete 2 Choose Delete Auto Scaling Group cleanup is completed. Clean Application Load Balancer and Target Group Access the EC2 interface:\nSelect Load Balancers Choose lamp-stack-alb Click on the Actions dropdown menu and select Delete load balancer In the Delete load balancer section:\nIn the confirm field, enter confirm Click Delete Next, also in the EC2 interface:\nSelect Target Groups Choose lamp-stack-tg Click on the Actions dropdown menu and select Delete In the Delete target group? section:\nClick Yes, delete Clean Launch Template and AMI We\u0026rsquo;ll clean up Launch Templates for the Bastion Host and the web application server.\nAccess the EC2 interface:\nSelect Launch Templates Choose bastion-host-launch-template Click on the Actions dropdown menu and select Delete template Proceed,\nSelect Launch Templates Choose Bookstore-launch-template Click on the Actions dropdown menu and select Delete template Next, still in the EC2 interface:\nSelect AMIs In the Amazon Machine Images (AMIs) section, select both Bookstore AMI and Bastion Host AMI Click on the Actions dropdown menu and select Deregister AMI In the Deregister AMI section:\nClick Deregister AMI Clean NAT Gateway We\u0026rsquo;ll clean up the two NAT Gateways.\nAccess the VPC interface:\nSelect NAT gateways Choose lamp-stack-nat-pub-sub-1a Click on the Actions dropdown menu and select Delete NAT gateway In the Delete NAT gateway section:\nIn the confirm deletion field, enter delete Click Delete Next,\nChoose lamp-stack-nat-pub-sub-2b Click on the Actions dropdown menu and select Delete NAT gateway In the Delete NAT gateway section:\nIn the confirm deletion field, enter delete Click Delete Clean EFS File System Access the Elastic File System interface:\nSelect the project\u0026rsquo;s file system. Choose Network Select Manage Next, in the Mount targets section:\nSelect Remove for both targets Click Save Back in the File systems interface:\nSelect bookstore-efs Choose Delete In the Delete file system section:\nEnter fs-061c0cc037d521abf, your File System ID Click Confirm Clean VPC Access the VPC interface:\nSelect Your VPCs Choose lamp-stack-vpc Click on the Actions dropdown menu and select Delete VPC In the Delete VPC section:\nEnter delete Click Delete "
+},
+{
+	"uri": "/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

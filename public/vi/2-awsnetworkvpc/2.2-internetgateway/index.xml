@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tạo và gắn Internet Gateway (IGW) vào VPC on GIỚI THIỆU VỀ AMAZON EC2</title>
+    <link>/vi/2-awsnetworkvpc/2.2-internetgateway/</link>
+    <description>Recent content in Tạo và gắn Internet Gateway (IGW) vào VPC on GIỚI THIỆU VỀ AMAZON EC2</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <atom:link href="/vi/2-awsnetworkvpc/2.2-internetgateway/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
