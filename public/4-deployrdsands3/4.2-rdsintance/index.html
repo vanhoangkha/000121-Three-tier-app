@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Creating RDS Instance :: INTRODUCTION TO AMAZON EC2.</title>
 
     
-    <link href="/css/nucleus.css?1716198918" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1716198918" rel="stylesheet">
-    <link href="/css/hybrid.css?1716198918" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1716198918" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1716198918" rel="stylesheet">
-    <link href="/css/auto-complete.css?1716198918" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1716198918" rel="stylesheet">
-    <link href="/css/theme.css?1716198918" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1716198918" rel="stylesheet">
+    <link href="/css/nucleus.css?1733825059" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733825059" rel="stylesheet">
+    <link href="/css/hybrid.css?1733825059" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733825059" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733825059" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733825059" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733825059" rel="stylesheet">
+    <link href="/css/theme.css?1733825059" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733825059" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1716198918" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733825059" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1716198918"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733825059"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1716198918"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1716198918"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733825059"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733825059"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1716198918"></script>
+<script type="text/javascript" src="/js/search.js?1733825059"></script>
 
     
   </div>
@@ -1375,7 +1375,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>23-03-2024</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -1478,34 +1478,34 @@
 <li>Select <strong>Databases</strong></li>
 <li>Choose <strong>Create database</strong></li>
 </ul>
-<p><img src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0001-createrdsintance.png?featherlight=false&amp;width=90pc" alt="Create RDS Instance"></p>
+<p><img alt="Create RDS Instance" src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0001-createrdsintance.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>In the <strong>Create database</strong> interface,</p>
 <ul>
 <li>Under <strong>Choose a database creation method</strong>, select <strong>Standard create</strong></li>
 </ul>
-<p><img src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0002-createrdsintance.png?featherlight=false&amp;width=90pc" alt="Create RDS Instance"></p>
+<p><img alt="Create RDS Instance" src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0002-createrdsintance.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Under <strong>Engine options</strong>, select <strong>MySQL</strong></li>
 </ul>
-<p><img src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0003-createrdsintance.png?featherlight=false&amp;width=90pc" alt="Create RDS Instance"></p>
+<p><img alt="Create RDS Instance" src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0003-createrdsintance.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Under <strong>Edition</strong>, keep all fields as default</li>
 </ul>
-<p><img src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0004-createrdsintance.png?featherlight=false&amp;width=90pc" alt="Create RDS Instance"></p>
+<p><img alt="Create RDS Instance" src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0004-createrdsintance.png?featherlight=false&width=90pc"></p>
 <p>Next,</p>
 <ul>
 <li>Under <strong>Templates</strong>, choose <strong>Dev/Test</strong></li>
 <li>Under <strong>Availability and durability</strong>, select <strong>Multi-AZ DB instance</strong></li>
 </ul>
-<p><img src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0005-createrdsintance.png?featherlight=false&amp;width=90pc" alt="Create RDS Instance"></p>
+<p><img alt="Create RDS Instance" src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0005-createrdsintance.png?featherlight=false&width=90pc"></p>
 <p>In the <strong>Settings</strong> section,</p>
 <ul>
 <li>For <strong>DB instance identifier</strong>, enter <strong><code>book-rds-database</code></strong></li>
 <li>For <strong>Master username</strong>, enter <strong><code>admin</code></strong></li>
 </ul>
-<p><img src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0006-createrdsintance.png?featherlight=false&amp;width=90pc" alt="Create RDS Instance"></p>
+<p><img alt="Create RDS Instance" src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0006-createrdsintance.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>For <strong>Master password</strong>, enter your database password and confirm it in <strong>Confirm master password</strong></li>
 </ul>
@@ -1513,50 +1513,50 @@
 <ul>
 <li>Under <strong>DB instance class</strong>, select <strong>Burstable classes (includes t classes)</strong> and choose <strong>db.t3.micro</strong></li>
 </ul>
-<p><img src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0007-createrdsintance.png?featherlight=false&amp;width=90pc" alt="Create RDS Instance"></p>
+<p><img alt="Create RDS Instance" src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0007-createrdsintance.png?featherlight=false&width=90pc"></p>
 <p>In the <strong>Storage</strong> section,</p>
 <ul>
 <li>For <strong>Allocated storage</strong>, enter <strong><code>22</code></strong></li>
 <li>For <strong>Storage autoscaling</strong>, select <strong>Enable storage autoscaling</strong></li>
 </ul>
-<p><img src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0008-createrdsintance.png?featherlight=false&amp;width=90pc" alt="Create RDS Instance"></p>
+<p><img alt="Create RDS Instance" src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0008-createrdsintance.png?featherlight=false&width=90pc"></p>
 <p>In the <strong>Connectivity</strong> section,</p>
 <ul>
 <li>Under <strong>Compute resource</strong>, select <strong>Don&rsquo;t connect to an EC2 compute resource</strong></li>
 <li>Under <strong>Network type</strong>, select <strong>IPv4</strong></li>
 </ul>
-<p><img src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0009-createrdsintance.png?featherlight=false&amp;width=90pc" alt="Create RDS Instance"></p>
+<p><img alt="Create RDS Instance" src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0009-createrdsintance.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Under <strong>Virtual private cloud (VPC)</strong>, select <strong>lamp-stack-vpc (vpc-Oacb9059f41ab5a37)</strong></li>
 <li>Under <strong>DB subnet group</strong>, choose <strong>book-rds-subnet-group</strong></li>
 <li>Under <strong>Public access</strong>, select <strong>No</strong></li>
 </ul>
-<p><img src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0010-createrdsintance.png?featherlight=false&amp;width=90pc" alt="Create RDS Instance"></p>
+<p><img alt="Create RDS Instance" src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0010-createrdsintance.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Under <strong>VPC security group (firewall)</strong>, choose <strong>Choose existing</strong></li>
 <li>Under <strong>Existing VPC security groups</strong>, select <strong>DatabaseSecurityGroup</strong></li>
 <li>Under <strong>Certificate authority</strong>, choose <strong>rds-ca-rsa2048-g1 (default)</strong></li>
 </ul>
-<p><img src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0011-createrdsintance.png?featherlight=false&amp;width=90pc" alt="Create RDS Instance"></p>
+<p><img alt="Create RDS Instance" src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0011-createrdsintance.png?featherlight=false&width=90pc"></p>
 <p>In the <strong>Database authentication</strong> section, leave it as <strong>Password authentication</strong></p>
 <p>Under <strong>Monitoring</strong>, select <strong>Enable Enhanced Monitoring</strong></p>
-<p><img src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0012-createrdsintance.png?featherlight=false&amp;width=90pc" alt="Create RDS Instance"></p>
+<p><img alt="Create RDS Instance" src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0012-createrdsintance.png?featherlight=false&width=90pc"></p>
 <p>Continuing, in the <strong>Database options</strong> section,</p>
 <ul>
 <li>For <strong>Initial database name</strong>, enter <strong><code>e_bookstore</code></strong></li>
 <li>For <strong>Backup</strong>, select <strong>Enable automated backups</strong></li>
 </ul>
-<p><img src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0013-createrdsintance.png?featherlight=false&amp;width=90pc" alt="Create RDS Instance"></p>
+<p><img alt="Create RDS Instance" src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0013-createrdsintance.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Leave the rest of the fields with their default values</li>
 </ul>
-<p><img src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0014-createrdsintance.png?featherlight=false&amp;width=90pc" alt="Create RDS Instance"></p>
+<p><img alt="Create RDS Instance" src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0014-createrdsintance.png?featherlight=false&width=90pc"></p>
 <p>Finally, select <strong>Create database</strong></p>
-<p><img src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0015-createrdsintance.png?featherlight=false&amp;width=90pc" alt="Create RDS Instance"></p>
+<p><img alt="Create RDS Instance" src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0015-createrdsintance.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>We have successfully created the database.</p>
-<p><img src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0016-createrdsintance.png?featherlight=false&amp;width=90pc" alt="Create RDS Instance"></p>
+<p><img alt="Create RDS Instance" src="/images/4-DeployRDSAndS3/4.2-RDSIntance/0016-createrdsintance.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 
@@ -2285,19 +2285,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1716198918"></script>
-    <script src="/js/perfect-scrollbar.min.js?1716198918"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1716198918"></script>
-    <script src="/js/jquery.sticky.js?1716198918"></script>
-    <script src="/js/featherlight.min.js?1716198918"></script>
-    <script src="/js/highlight.pack.js?1716198918"></script>
+    <script src="/js/clipboard.min.js?1733825059"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733825059"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733825059"></script>
+    <script src="/js/jquery.sticky.js?1733825059"></script>
+    <script src="/js/featherlight.min.js?1733825059"></script>
+    <script src="/js/highlight.pack.js?1733825059"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1716198918"></script>
-    <script src="/js/learn.js?1716198918"></script>
-    <script src="/js/hugo-learn.js?1716198918"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733825059"></script>
+    <script src="/js/learn.js?1733825059"></script>
+    <script src="/js/hugo-learn.js?1733825059"></script>
 
-    <link href="/mermaid/mermaid.css?1716198918" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1716198918"></script>
+    <link href="/mermaid/mermaid.css?1733825059" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733825059"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

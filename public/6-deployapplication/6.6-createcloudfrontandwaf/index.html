@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Create CloudFront and Web ACL :: INTRODUCTION TO AMAZON EC2.</title>
 
     
-    <link href="/css/nucleus.css?1716198918" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1716198918" rel="stylesheet">
-    <link href="/css/hybrid.css?1716198918" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1716198918" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1716198918" rel="stylesheet">
-    <link href="/css/auto-complete.css?1716198918" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1716198918" rel="stylesheet">
-    <link href="/css/theme.css?1716198918" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1716198918" rel="stylesheet">
+    <link href="/css/nucleus.css?1733825059" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733825059" rel="stylesheet">
+    <link href="/css/hybrid.css?1733825059" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733825059" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733825059" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733825059" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733825059" rel="stylesheet">
+    <link href="/css/theme.css?1733825059" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733825059" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1716198918" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733825059" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1716198918"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733825059"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1716198918"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1716198918"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733825059"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733825059"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1716198918"></script>
+<script type="text/javascript" src="/js/search.js?1733825059"></script>
 
     
   </div>
@@ -1375,7 +1375,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>23-03-2024</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -1478,14 +1478,14 @@
 <li>Type <strong><code>cloudfront</code></strong></li>
 <li>Under <strong>Services</strong>, select <strong>CloudFront</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0001-createcloudfront.png?featherlight=false&amp;width=90pc" alt="Create CloudFront"></p>
+<p><img alt="Create CloudFront" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0001-createcloudfront.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>In the <strong>CloudFront</strong> interface</p>
 <ul>
 <li>Click <strong>Create a CloudFront distribution</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0002-createcloudfront.png?featherlight=false&amp;width=90pc" alt="Create CloudFront"></p>
+<p><img alt="Create CloudFront" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0002-createcloudfront.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>In the <strong>Origin</strong> section</p>
@@ -1493,11 +1493,11 @@
 <li>Under <strong>Origin domain</strong>, select <strong>lamp-stack-alb-541405871.us-east-1.elb.amazonaws.com</strong></li>
 <li>Under <strong>Protocol</strong>, select <strong>HTTP Only</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0003-createcloudfront.png?featherlight=false&amp;width=90pc" alt="Create CloudFront"></p>
+<p><img alt="Create CloudFront" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0003-createcloudfront.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Leave other fields as default</li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0004-createcloudfront.png?featherlight=false&amp;width=90pc" alt="Create CloudFront"></p>
+<p><img alt="Create CloudFront" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0004-createcloudfront.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>In the <strong>Default cache behavior</strong> section</p>
@@ -1506,28 +1506,28 @@
 <li>Under <strong>Viewer protocol policy</strong>, select <strong>HTTP and HTTPS</strong></li>
 <li>Under <strong>Allowed HTTP methods</strong>, select <strong>GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0005-createcloudfront.png?featherlight=false&amp;width=90pc" alt="Create CloudFront"></p>
+<p><img alt="Create CloudFront" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0005-createcloudfront.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Under <strong>Cache key and origin requests</strong>, select <strong>Cache policy and origin request policy (recommended)</strong></li>
 <li>Leave other fields as default</li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0006-createcloudfront.png?featherlight=false&amp;width=90pc" alt="Create CloudFront"></p>
+<p><img alt="Create CloudFront" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0006-createcloudfront.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Leave other fields as default</li>
 <li>Click <strong>Create distribution</strong> to finish creating the CloudFront Distribution</li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0007-createcloudfront.png?featherlight=false&amp;width=90pc" alt="Create CloudFront"></p>
+<p><img alt="Create CloudFront" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0007-createcloudfront.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>CloudFront Distribution creation is successful.</p>
 <ul>
 <li>Copy the content under <strong>Distribution domain name</strong> and paste it into your browser.</li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0008-createcloudfront.png?featherlight=false&amp;width=90pc" alt="Create CloudFront"></p>
+<p><img alt="Create CloudFront" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0008-createcloudfront.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>The image below shows the Web application running with the new domain from CloudFront.</li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0009-createcloudfront.png?featherlight=false&amp;width=90pc" alt="Create CloudFront"></p>
+<p><img alt="Create CloudFront" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0009-createcloudfront.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 <h4 id="create-web-acl">Create Web ACL</h4>
@@ -1538,7 +1538,7 @@
 <li>Type <strong><code>waf</code></strong></li>
 <li>Under <strong>Services</strong>, select <strong>WAF &amp; Shield</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0001-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0001-createwaf.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>In the <strong>WAF &amp; Shield</strong> interface</p>
@@ -1546,7 +1546,7 @@
 <li>Click <strong>Getting started</strong></li>
 <li>Click <strong>Create web ACL</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0002-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0002-createwaf.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>In the <strong>Describe web ACL and associate it to AWS resources</strong> section</p>
@@ -1556,53 +1556,53 @@
 <li>Under <strong>Description - optional</strong>, enter <strong><code>protect my application</code></strong></li>
 <li>Under <strong>CloudWatch metric name</strong>, enter <strong><code>bookstore-app</code></strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0003-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0003-createwaf.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Under <strong>Associated AWS resources - optional</strong>, click <strong>Add AWS resources</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0004-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0004-createwaf.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Under <strong>Resource type</strong>, select <strong>CloudFront Distribution</strong> and select the resource created in the previous step <strong>E2H26TUZ72XRKT - d22fsOdgzskx5x.cloudfront.net</strong></li>
 <li>Click <strong>Add</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0005-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0005-createwaf.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Click <strong>Next</strong> to proceed</li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0006-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0006-createwaf.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>In the <strong>Add rules and rule groups</strong> section</p>
 <ul>
 <li>Under <strong>Rules</strong>, click <strong>Add rules</strong> and select <strong>Add managed rule groups</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0007-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0007-createwaf.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Select <strong>AWS managed rule groups</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0008-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0008-createwaf.png?featherlight=false&width=90pc"></p>
 <p>Under <strong>Free rule groups</strong>, select <strong>Add to web ACL</strong> for the following sections:</p>
 <ul>
 <li><strong>Amazon IP reputation list</strong></li>
 <li><strong>Anonymous IP list</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0009-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0009-createwaf.png?featherlight=false&width=90pc"></p>
 <ul>
 <li><strong>SQL database</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0010-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0010-createwaf.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Click <strong>Add rule</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0011-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0011-createwaf.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Leave the remaining settings as default, then select <strong>Create web ACL</strong> to complete the creation of the Web ACL.</p>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0014-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0014-createwaf.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>We have successfully created the Web ACL.</p>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0015-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0015-createwaf.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 
@@ -2331,19 +2331,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1716198918"></script>
-    <script src="/js/perfect-scrollbar.min.js?1716198918"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1716198918"></script>
-    <script src="/js/jquery.sticky.js?1716198918"></script>
-    <script src="/js/featherlight.min.js?1716198918"></script>
-    <script src="/js/highlight.pack.js?1716198918"></script>
+    <script src="/js/clipboard.min.js?1733825059"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733825059"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733825059"></script>
+    <script src="/js/jquery.sticky.js?1733825059"></script>
+    <script src="/js/featherlight.min.js?1733825059"></script>
+    <script src="/js/highlight.pack.js?1733825059"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1716198918"></script>
-    <script src="/js/learn.js?1716198918"></script>
-    <script src="/js/hugo-learn.js?1716198918"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733825059"></script>
+    <script src="/js/learn.js?1733825059"></script>
+    <script src="/js/hugo-learn.js?1733825059"></script>
 
-    <link href="/mermaid/mermaid.css?1716198918" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1716198918"></script>
+    <link href="/mermaid/mermaid.css?1733825059" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733825059"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tải Source Code từ S3 vào EC2 Setup Server :: GIỚI THIỆU VỀ AMAZON EC2</title>
 
     
-    <link href="/css/nucleus.css?1716198918" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1716198918" rel="stylesheet">
-    <link href="/css/hybrid.css?1716198918" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1716198918" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1716198918" rel="stylesheet">
-    <link href="/css/auto-complete.css?1716198918" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1716198918" rel="stylesheet">
-    <link href="/css/theme.css?1716198918" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1716198918" rel="stylesheet">
+    <link href="/css/nucleus.css?1733825060" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733825060" rel="stylesheet">
+    <link href="/css/hybrid.css?1733825060" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733825060" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733825060" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733825060" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733825060" rel="stylesheet">
+    <link href="/css/theme.css?1733825060" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733825060" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1716198918" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733825060" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1716198918"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733825060"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1716198918"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1716198918"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733825060"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733825060"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1716198918"></script>
+<script type="text/javascript" src="/js/search.js?1733825060"></script>
 
     
   </div>
@@ -1375,7 +1375,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>23-03-2024</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -1480,7 +1480,7 @@
 <li>Chọn <strong>Security</strong></li>
 <li>Chọn <strong>Modify IAM role</strong></li>
 </ul>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.4-DownloadSourceCodeS3/0001-downloadfile.png?featherlight=false&amp;width=90pc" alt="Attach IAM to EC2"></p>
+<p><img alt="Attach IAM to EC2" src="/images/5-SetupEc2ServerAndEFS/5.4-DownloadSourceCodeS3/0001-downloadfile.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Trong giao diện <strong>Modify IAM role</strong></p>
@@ -1488,7 +1488,7 @@
 <li>Tại mục <strong>IAM role</strong>, chọn <strong>WS1-IAM-role-S3</strong></li>
 <li>Chọn <strong>Update IAM role</strong></li>
 </ul>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.4-DownloadSourceCodeS3/0002-downloadfile.png?featherlight=false&amp;width=90pc" alt="Attach IAM to EC2"></p>
+<p><img alt="Attach IAM to EC2" src="/images/5-SetupEc2ServerAndEFS/5.4-DownloadSourceCodeS3/0002-downloadfile.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 <h4 id="tải-source-code-từ-s3-vào-ec2-setup-server">Tải Source Code từ S3 vào EC2 Setup Server</h4>
@@ -1499,7 +1499,7 @@
 </code></pre><p>Sau đó truy cập vào thư mục <strong>/var/www/html</strong> để xác minh quá trình tải Source thành công</p>
 <pre tabindex="0"><code>cd /var/www/html
 ls -l
-</code></pre><p><img src="/images/5-SetupEc2ServerAndEFS/5.4-DownloadSourceCodeS3/0004-downloadfile.png?featherlight=false&amp;width=90pc" alt="Attach IAM to EC2"></p>
+</code></pre><p><img alt="Attach IAM to EC2" src="/images/5-SetupEc2ServerAndEFS/5.4-DownloadSourceCodeS3/0004-downloadfile.png?featherlight=false&width=90pc"></p>
 
 <div class="notices note" ><p>Lưu ý: thay <strong>book-application-bucket</strong> bằng tên của Bucket bạn tạo trong bước trước.</p>
 </div>
@@ -1509,7 +1509,7 @@ ls -l
 </ol>
 <pre tabindex="0"><code>sudo unzip FCJ2024-sourcecode-wsl.zip
 sudo cp -R FCJ2024-sourcecode-ws1/* /var/www/html/
-</code></pre><p><img src="/images/5-SetupEc2ServerAndEFS/5.4-DownloadSourceCodeS3/0006-downloadfile.png?featherlight=false&amp;width=90pc" alt="Attach IAM to EC2"></p>
+</code></pre><p><img alt="Attach IAM to EC2" src="/images/5-SetupEc2ServerAndEFS/5.4-DownloadSourceCodeS3/0006-downloadfile.png?featherlight=false&width=90pc"></p>
 
 
 
@@ -2236,19 +2236,19 @@ sudo cp -R FCJ2024-sourcecode-ws1/* /var/www/html/
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1716198919"></script>
-    <script src="/js/perfect-scrollbar.min.js?1716198919"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1716198919"></script>
-    <script src="/js/jquery.sticky.js?1716198919"></script>
-    <script src="/js/featherlight.min.js?1716198919"></script>
-    <script src="/js/highlight.pack.js?1716198919"></script>
+    <script src="/js/clipboard.min.js?1733825060"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733825060"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733825060"></script>
+    <script src="/js/jquery.sticky.js?1733825060"></script>
+    <script src="/js/featherlight.min.js?1733825060"></script>
+    <script src="/js/highlight.pack.js?1733825060"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1716198919"></script>
-    <script src="/js/learn.js?1716198919"></script>
-    <script src="/js/hugo-learn.js?1716198919"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733825060"></script>
+    <script src="/js/learn.js?1733825060"></script>
+    <script src="/js/hugo-learn.js?1733825060"></script>
 
-    <link href="/mermaid/mermaid.css?1716198919" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1716198919"></script>
+    <link href="/mermaid/mermaid.css?1733825060" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733825060"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

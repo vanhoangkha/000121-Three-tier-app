@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Create and Configure Public Route Table :: INTRODUCTION TO AMAZON EC2.</title>
 
     
-    <link href="/css/nucleus.css?1716198918" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1716198918" rel="stylesheet">
-    <link href="/css/hybrid.css?1716198918" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1716198918" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1716198918" rel="stylesheet">
-    <link href="/css/auto-complete.css?1716198918" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1716198918" rel="stylesheet">
-    <link href="/css/theme.css?1716198918" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1716198918" rel="stylesheet">
+    <link href="/css/nucleus.css?1733825059" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733825059" rel="stylesheet">
+    <link href="/css/hybrid.css?1733825059" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733825059" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733825059" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733825059" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733825059" rel="stylesheet">
+    <link href="/css/theme.css?1733825059" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733825059" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1716198918" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733825059" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1716198918"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733825059"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1716198918"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1716198918"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733825059"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733825059"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1716198918"></script>
+<script type="text/javascript" src="/js/search.js?1733825059"></script>
 
     
   </div>
@@ -1375,7 +1375,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>23-03-2024</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -1484,7 +1484,7 @@
 <li>Select <strong>Route tables</strong></li>
 <li>Click on <strong>Create route table</strong></li>
 </ul>
-<p><img src="/images/2.4-RouteTable/2.4.1-PublicRT/0001-creatert.png?featherlight=false&amp;width=90pc" alt="Create Route Table"></p>
+<p><img alt="Create Route Table" src="/images/2.4-RouteTable/2.4.1-PublicRT/0001-creatert.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>In the <strong>Create route table</strong> interface:</p>
@@ -1499,7 +1499,7 @@
 </li>
 <li>Finally, click on <strong>Create route table</strong></li>
 </ul>
-<p><img src="/images/2.4-RouteTable/2.4.1-PublicRT/0002-creatert.png?featherlight=false&amp;width=90pc" alt="Create Route Table"></p>
+<p><img alt="Create Route Table" src="/images/2.4-RouteTable/2.4.1-PublicRT/0002-creatert.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Next, we will add the Internet Gateway to the newly created Public Route Table:</p>
@@ -1507,14 +1507,14 @@
 <li>Click on the <strong>Routes</strong> tab</li>
 <li>Select <strong>Edit routes</strong></li>
 </ul>
-<p><img src="/images/2.4-RouteTable/2.4.1-PublicRT/0003-creatert.png?featherlight=false&amp;width=90pc" alt="Create Route Table"></p>
+<p><img alt="Create Route Table" src="/images/2.4-RouteTable/2.4.1-PublicRT/0003-creatert.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Under <strong>Destination</strong>, select <strong>0.0.0.0/0</strong></li>
 <li>Under <strong>Target</strong>, select <strong>Internet Gateway</strong></li>
 <li>Then choose <strong>igw-oc134f10ab513a4cd</strong>, which is the IGW we created earlier.</li>
 <li>Finally, click <strong>Save changes</strong></li>
 </ul>
-<p><img src="/images/2.4-RouteTable/2.4.1-PublicRT/0004-creatert.png?featherlight=false&amp;width=90pc" alt="Create Route Table"></p>
+<p><img alt="Create Route Table" src="/images/2.4-RouteTable/2.4.1-PublicRT/0004-creatert.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 
@@ -1524,7 +1524,7 @@
 <ul>
 <li>After adding the route to the Internet, the result will look like this:</li>
 </ul>
-<p><img src="/images/2.4-RouteTable/2.4.1-PublicRT/0005-creatert.png?featherlight=false&amp;width=90pc" alt="Create Route Table"></p>
+<p><img alt="Create Route Table" src="/images/2.4-RouteTable/2.4.1-PublicRT/0005-creatert.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>
 <p>Now we will associate the 2 Public Subnets we created earlier with this Route Table:</p>
@@ -1532,16 +1532,16 @@
 <li>Click on <strong>Subnet associations</strong></li>
 <li>Select <strong>Edit subnet associations</strong></li>
 </ul>
-<p><img src="/images/2.4-RouteTable/2.4.1-PublicRT/0006-creatert.png?featherlight=false&amp;width=90pc" alt="Create Route Table"></p>
+<p><img alt="Create Route Table" src="/images/2.4-RouteTable/2.4.1-PublicRT/0006-creatert.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Under <strong>Available subnets</strong>, select <strong>pub-sub-2b</strong> and <strong>pub-sub-1a</strong></li>
 <li>Finally, click <strong>Save associations</strong></li>
 </ul>
-<p><img src="/images/2.4-RouteTable/2.4.1-PublicRT/0007-creatert.png?featherlight=false&amp;width=90pc" alt="Create Route Table"></p>
+<p><img alt="Create Route Table" src="/images/2.4-RouteTable/2.4.1-PublicRT/0007-creatert.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>The result after association will look like this:</li>
 </ul>
-<p><img src="/images/2.4-RouteTable/2.4.1-PublicRT/0008-creatert.png?featherlight=false&amp;width=90pc" alt="Create Route Table"></p>
+<p><img alt="Create Route Table" src="/images/2.4-RouteTable/2.4.1-PublicRT/0008-creatert.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 
@@ -2271,19 +2271,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1716198918"></script>
-    <script src="/js/perfect-scrollbar.min.js?1716198918"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1716198918"></script>
-    <script src="/js/jquery.sticky.js?1716198918"></script>
-    <script src="/js/featherlight.min.js?1716198918"></script>
-    <script src="/js/highlight.pack.js?1716198918"></script>
+    <script src="/js/clipboard.min.js?1733825059"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733825059"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733825059"></script>
+    <script src="/js/jquery.sticky.js?1733825059"></script>
+    <script src="/js/featherlight.min.js?1733825059"></script>
+    <script src="/js/highlight.pack.js?1733825059"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1716198918"></script>
-    <script src="/js/learn.js?1716198918"></script>
-    <script src="/js/hugo-learn.js?1716198918"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733825059"></script>
+    <script src="/js/learn.js?1733825059"></script>
+    <script src="/js/hugo-learn.js?1733825059"></script>
 
-    <link href="/mermaid/mermaid.css?1716198918" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1716198918"></script>
+    <link href="/mermaid/mermaid.css?1733825059" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733825059"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

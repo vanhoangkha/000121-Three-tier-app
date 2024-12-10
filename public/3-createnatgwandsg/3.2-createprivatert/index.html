@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Create and Configure Private Route Table :: INTRODUCTION TO AMAZON EC2.</title>
 
     
-    <link href="/css/nucleus.css?1716198918" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1716198918" rel="stylesheet">
-    <link href="/css/hybrid.css?1716198918" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1716198918" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1716198918" rel="stylesheet">
-    <link href="/css/auto-complete.css?1716198918" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1716198918" rel="stylesheet">
-    <link href="/css/theme.css?1716198918" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1716198918" rel="stylesheet">
+    <link href="/css/nucleus.css?1733825059" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733825059" rel="stylesheet">
+    <link href="/css/hybrid.css?1733825059" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733825059" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733825059" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733825059" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733825059" rel="stylesheet">
+    <link href="/css/theme.css?1733825059" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733825059" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1716198918" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733825059" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1716198918"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733825059"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1716198918"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1716198918"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733825059"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733825059"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1716198918"></script>
+<script type="text/javascript" src="/js/search.js?1733825059"></script>
 
     
   </div>
@@ -1375,7 +1375,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>23-03-2024</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -1478,7 +1478,7 @@
 <li>Select <strong>Route tables</strong></li>
 <li>Click <strong>Create route table</strong></li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0001-createprirt.png?featherlight=false&amp;width=90pc" alt="Create Private Route Table"></p>
+<p><img alt="Create Private Route Table" src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0001-createprirt.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>In the <strong>Create route table</strong> interface:</p>
@@ -1493,7 +1493,7 @@
 </li>
 <li>Finally, click <strong>Create route table</strong></li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0002-createprirt.png?featherlight=false&amp;width=90pc" alt="Create Private Route Table"></p>
+<p><img alt="Create Private Route Table" src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0002-createprirt.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Now, let&rsquo;s associate the 2 Private Subnets in AZ us-east-1a that we created earlier with this Private Route Table.</p>
@@ -1501,12 +1501,12 @@
 <li>Click on <strong>Subnet associations</strong></li>
 <li>Select <strong>Edit subnet associations</strong></li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0003-createprirt.png?featherlight=false&amp;width=90pc" alt="Create Private Route Table"></p>
+<p><img alt="Create Private Route Table" src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0003-createprirt.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Under <strong>Available subnets</strong>, select <strong>pri-sub-3a</strong> and <strong>pri-sub-5a</strong></li>
 <li>Finally, click <strong>Save associations</strong></li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0004-createprirt.png?featherlight=false&amp;width=90pc" alt="Create Private Route Table"></p>
+<p><img alt="Create Private Route Table" src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0004-createprirt.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Next, let&rsquo;s add the NAT Gateway in AZ us-east-1a to this Private Route Table that we just created.</p>
@@ -1514,14 +1514,14 @@
 <li>Click on <strong>Routes</strong></li>
 <li>Select <strong>Edit routes</strong></li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0005-createprirt.png?featherlight=false&amp;width=90pc" alt="Create Private Route Table"></p>
+<p><img alt="Create Private Route Table" src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0005-createprirt.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>For <strong>Destination</strong>, select <strong>0.0.0.0/0</strong></li>
 <li>For <strong>Target</strong>, select <strong>NAT Gateway</strong></li>
 <li>Then select <strong>nat-01aa9ae6861e6759a (lamp-stack-nat-pub-sub-1a)</strong>, which is the NAT Gateway we created in the previous step.</li>
 <li>Finally, click <strong>Save changes</strong></li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0006-createprirt.png?featherlight=false&amp;width=90pc" alt="Create Private Route Table"></p>
+<p><img alt="Create Private Route Table" src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0006-createprirt.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 
@@ -1542,7 +1542,7 @@
 </li>
 <li>Finally, click <strong>Create route table</strong></li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0007-createprirt.png?featherlight=false&amp;width=90pc" alt="Create Private Route Table"></p>
+<p><img alt="Create Private Route Table" src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0007-createprirt.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Next, we will add the NAT Gateway in AZ us-east-1b to the second Private Route Table that we just created.</p>
@@ -1550,14 +1550,14 @@
 <li>Click on <strong>Routes</strong></li>
 <li>Select <strong>Edit routes</strong></li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0008-createprirt.png?featherlight=false&amp;width=90pc" alt="Create Private Route Table"></p>
+<p><img alt="Create Private Route Table" src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0008-createprirt.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>For <strong>Destination</strong>, select <strong>0.0.0.0/0</strong></li>
 <li>For <strong>Target</strong>, select <strong>NAT Gateway</strong></li>
 <li>Then select <strong>nat-052de2c3601c08459 (lamp-stack-nat-pub-sub-2b)</strong>, which is the second NAT Gateway we created in the previous step.</li>
 <li>Finally, click <strong>Save changes</strong></li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0009-createprirt.png?featherlight=false&amp;width=90pc" alt="Create Private Route Table"></p>
+<p><img alt="Create Private Route Table" src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0009-createprirt.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Now, let&rsquo;s associate the 2 Private Subnets in AZ us-east-1b that we created earlier with this second Private Route Table.</p>
@@ -1565,16 +1565,16 @@
 <li>Click on <strong>Subnet associations</strong></li>
 <li>Select <strong>Edit subnet associations</strong></li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0010-createprirt.png?featherlight=false&amp;width=90pc" alt="Create Private Route Table"></p>
+<p><img alt="Create Private Route Table" src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0010-createprirt.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Under <strong>Available subnets</strong>, select <strong>pri-sub-4b</strong> and <strong>pri-sub-6b</strong></li>
 <li>Finally, click <strong>Save associations</strong></li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0011-createprirt.png?featherlight=false&amp;width=90pc" alt="Create Private Route Table"></p>
+<p><img alt="Create Private Route Table" src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0011-createprirt.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>The result after creating the two Private Route Tables is shown below:</p>
-<p><img src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0012-createprirt.png?featherlight=false&amp;width=90pc" alt="Create Private Route Table"></p>
+<p><img alt="Create Private Route Table" src="/images/3-CreateNATGWAndSG/3.2-CreatePrivateRT/0012-createprirt.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 
@@ -2303,19 +2303,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1716198918"></script>
-    <script src="/js/perfect-scrollbar.min.js?1716198918"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1716198918"></script>
-    <script src="/js/jquery.sticky.js?1716198918"></script>
-    <script src="/js/featherlight.min.js?1716198918"></script>
-    <script src="/js/highlight.pack.js?1716198918"></script>
+    <script src="/js/clipboard.min.js?1733825059"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733825059"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733825059"></script>
+    <script src="/js/jquery.sticky.js?1733825059"></script>
+    <script src="/js/featherlight.min.js?1733825059"></script>
+    <script src="/js/highlight.pack.js?1733825059"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1716198918"></script>
-    <script src="/js/learn.js?1716198918"></script>
-    <script src="/js/hugo-learn.js?1716198918"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733825059"></script>
+    <script src="/js/learn.js?1733825059"></script>
+    <script src="/js/hugo-learn.js?1733825059"></script>
 
-    <link href="/mermaid/mermaid.css?1716198918" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1716198918"></script>
+    <link href="/mermaid/mermaid.css?1733825059" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733825059"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

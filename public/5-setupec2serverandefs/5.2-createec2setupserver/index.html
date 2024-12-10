@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Create EC2 Setup Server in Private Subnet :: INTRODUCTION TO AMAZON EC2.</title>
 
     
-    <link href="/css/nucleus.css?1716198918" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1716198918" rel="stylesheet">
-    <link href="/css/hybrid.css?1716198918" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1716198918" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1716198918" rel="stylesheet">
-    <link href="/css/auto-complete.css?1716198918" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1716198918" rel="stylesheet">
-    <link href="/css/theme.css?1716198918" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1716198918" rel="stylesheet">
+    <link href="/css/nucleus.css?1733825059" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733825059" rel="stylesheet">
+    <link href="/css/hybrid.css?1733825059" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733825059" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733825059" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733825059" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733825059" rel="stylesheet">
+    <link href="/css/theme.css?1733825059" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733825059" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1716198918" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733825059" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1716198918"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733825059"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1716198918"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1716198918"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733825059"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733825059"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1716198918"></script>
+<script type="text/javascript" src="/js/search.js?1733825059"></script>
 
     
   </div>
@@ -1375,7 +1375,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>23-03-2024</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -1478,7 +1478,7 @@
 <li>Type <strong><code>ec2</code></strong></li>
 <li>Under <strong>Services</strong>, select <strong>EC2</strong></li>
 </ul>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.2-CreateEC2SetupServer/0001-createec2setupserver.png?featherlight=false&amp;width=90pc" alt="Create EC2 Setup Server"></p>
+<p><img alt="Create EC2 Setup Server" src="/images/5-SetupEc2ServerAndEFS/5.2-CreateEC2SetupServer/0001-createec2setupserver.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>In the <strong>EC2 Dashboard</strong></p>
@@ -1492,11 +1492,11 @@
 <ul>
 <li>Under <strong>Name</strong>, enter <strong><code>lamp-stack-setup-server</code></strong></li>
 </ul>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.2-CreateEC2SetupServer/0002-createec2setupserver.png?featherlight=false&amp;width=90pc" alt="Create EC2 Setup Server"></p>
+<p><img alt="Create EC2 Setup Server" src="/images/5-SetupEc2ServerAndEFS/5.2-CreateEC2SetupServer/0002-createec2setupserver.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Under <strong>Application and OS Images (Amazon Machine Image)</strong>, select <strong>AmazonLinux</strong></li>
 </ul>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.2-CreateEC2SetupServer/0003-createec2setupserver.png?featherlight=false&amp;width=90pc" alt="Create EC2 Setup Server"></p>
+<p><img alt="Create EC2 Setup Server" src="/images/5-SetupEc2ServerAndEFS/5.2-CreateEC2SetupServer/0003-createec2setupserver.png?featherlight=false&width=90pc"></p>
 <p>Then,</p>
 <ul>
 <li>Under <strong>Instance type</strong>, choose <strong>t2.micro</strong></li>
@@ -1508,7 +1508,7 @@
 <div class="notices note" ><p>Note: If you don&rsquo;t have a Key pair, select <strong>Create new key pair</strong></p>
 </div>
 
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.1-CreateBastionHost/0005-createbastionhost.png?featherlight=false&amp;width=90pc" alt="Create EC2 Setup Server"></p>
+<p><img alt="Create EC2 Setup Server" src="/images/5-SetupEc2ServerAndEFS/5.1-CreateBastionHost/0005-createbastionhost.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>
 <p>In the <strong>Network settings</strong> section:</p>
@@ -1518,19 +1518,19 @@
 <li>Under <strong>Auto-assign public IP</strong>, select <strong>Disable</strong></li>
 <li>Under <strong>Firewall (security groups)</strong>, select <strong>Select existing security group</strong> and choose <strong>WebserverSecurityGroup</strong>, <strong>DatabaseSecurityGroup</strong>, and <strong>ALBSecurityGroup</strong></li>
 </ul>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.2-CreateEC2SetupServer/0005-createec2setupserver.png?featherlight=false&amp;width=90pc" alt="Create EC2 Setup Server"></p>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.2-CreateEC2SetupServer/0006-createec2setupserver.png?featherlight=false&amp;width=90pc" alt="Create EC2 Setup Server"></p>
+<p><img alt="Create EC2 Setup Server" src="/images/5-SetupEc2ServerAndEFS/5.2-CreateEC2SetupServer/0005-createec2setupserver.png?featherlight=false&width=90pc"></p>
+<p><img alt="Create EC2 Setup Server" src="/images/5-SetupEc2ServerAndEFS/5.2-CreateEC2SetupServer/0006-createec2setupserver.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>In the <strong>Configure storage</strong> section, keep the default values.</p>
 <ul>
 <li>Finally, click <strong>Launch instance</strong> to complete the creation of the EC2 Setup Server.</li>
 </ul>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.2-CreateEC2SetupServer/0007-createec2setupserver.png?featherlight=false&amp;width=90pc" alt="Create EC2 Setup Server"></p>
+<p><img alt="Create EC2 Setup Server" src="/images/5-SetupEc2ServerAndEFS/5.2-CreateEC2SetupServer/0007-createec2setupserver.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>In the <strong>Instances</strong> section, you can see that the EC2 Setup Server has been successfully created.</p>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.2-CreateEC2SetupServer/0009-createec2setupserver.png?featherlight=false&amp;width=90pc" alt="Create EC2 Setup Server"></p>
+<p><img alt="Create EC2 Setup Server" src="/images/5-SetupEc2ServerAndEFS/5.2-CreateEC2SetupServer/0009-createec2setupserver.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 
@@ -2259,19 +2259,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1716198918"></script>
-    <script src="/js/perfect-scrollbar.min.js?1716198918"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1716198918"></script>
-    <script src="/js/jquery.sticky.js?1716198918"></script>
-    <script src="/js/featherlight.min.js?1716198918"></script>
-    <script src="/js/highlight.pack.js?1716198918"></script>
+    <script src="/js/clipboard.min.js?1733825059"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733825059"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733825059"></script>
+    <script src="/js/jquery.sticky.js?1733825059"></script>
+    <script src="/js/featherlight.min.js?1733825059"></script>
+    <script src="/js/highlight.pack.js?1733825059"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1716198918"></script>
-    <script src="/js/learn.js?1716198918"></script>
-    <script src="/js/hugo-learn.js?1716198918"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733825059"></script>
+    <script src="/js/learn.js?1733825059"></script>
+    <script src="/js/hugo-learn.js?1733825059"></script>
 
-    <link href="/mermaid/mermaid.css?1716198918" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1716198918"></script>
+    <link href="/mermaid/mermaid.css?1733825059" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733825059"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

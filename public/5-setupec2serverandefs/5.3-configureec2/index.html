@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Configure the EC2 Setup Server :: INTRODUCTION TO AMAZON EC2.</title>
 
     
-    <link href="/css/nucleus.css?1716198918" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1716198918" rel="stylesheet">
-    <link href="/css/hybrid.css?1716198918" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1716198918" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1716198918" rel="stylesheet">
-    <link href="/css/auto-complete.css?1716198918" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1716198918" rel="stylesheet">
-    <link href="/css/theme.css?1716198918" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1716198918" rel="stylesheet">
+    <link href="/css/nucleus.css?1733825059" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733825059" rel="stylesheet">
+    <link href="/css/hybrid.css?1733825059" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733825059" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733825059" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733825059" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733825059" rel="stylesheet">
+    <link href="/css/theme.css?1733825059" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733825059" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1716198918" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733825059" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1716198918"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733825059"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1716198918"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1716198918"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733825059"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733825059"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1716198918"></script>
+<script type="text/javascript" src="/js/search.js?1733825059"></script>
 
     
   </div>
@@ -1375,7 +1375,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>23-03-2024</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -1478,28 +1478,28 @@
 <li>Choose <strong>EC2 Instance Connect</strong>.</li>
 <li>Then click <strong>Connect</strong>.</li>
 </ul>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0001-bastiontoserver.png?featherlight=false&amp;width=90pc" alt="Bastion to EC2"></p>
+<p><img alt="Bastion to EC2" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0001-bastiontoserver.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>You&rsquo;ll see that you have successfully accessed the Bastion Host.</p>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0002-bastiontoserver.png?featherlight=false&amp;width=90pc" alt="Bastion to EC2"></p>
+<p><img alt="Bastion to EC2" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0002-bastiontoserver.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Type <strong><code>ping google.com</code></strong> to check the internet connection, the result is as shown in the images below.</p>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0003-bastiontoserver.png?featherlight=false&amp;width=90pc" alt="Bastion to EC2"></p>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0004-bastiontoserver.png?featherlight=false&amp;width=90pc" alt="Bastion to EC2"></p>
+<p><img alt="Bastion to EC2" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0003-bastiontoserver.png?featherlight=false&width=90pc"></p>
+<p><img alt="Bastion to EC2" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0004-bastiontoserver.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Type <strong><code>sudo nano ssh-key.pem</code></strong> to create an SSH key to access the EC2 Setup Server.</p>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0005-bastiontoserver.png?featherlight=false&amp;width=90pc" alt="Bastion to EC2"></p>
+<p><img alt="Bastion to EC2" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0005-bastiontoserver.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>The content of the <strong>ssh-key.pem</strong> file will be in the key pair file that we selected while creating the EC2 Setup Server. We&rsquo;ll copy it here, then save and exit the file.</p>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0006-bastiontoserver.png?featherlight=false&amp;width=90pc" alt="Bastion to EC2"></p>
+<p><img alt="Bastion to EC2" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0006-bastiontoserver.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Type <strong><code>sudo chmod 400 ssh-key.pem</code></strong> to allow reading the contents of this file, but not writing to it or executing it.</p>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0008-bastiontoserver.png?featherlight=false&amp;width=90pc" alt="Bastion to EC2"></p>
+<p><img alt="Bastion to EC2" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0008-bastiontoserver.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Finally, type <strong><code>sudo ssh -i &quot;ssh-key.pem&quot; ec2-user@10.0.3.239</code></strong> to access the EC2 Setup Server.</p>
@@ -1509,11 +1509,11 @@
 <div class="notices note" ><p>Note: <strong>10.0.3.239</strong> is the private IPv4 address of the EC2 Setup Server. So, make sure to replace it with your server&rsquo;s IP address!</p>
 </div>
 
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0009-bastiontoserver.png?featherlight=false&amp;width=90pc" alt="Bastion to EC2"></p>
+<p><img alt="Bastion to EC2" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0009-bastiontoserver.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>
 <p>Type <strong><code>ping google.com</code></strong> again to check the internet connection, the result is as shown below.</p>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/00010-bastiontoserver.png?featherlight=false&amp;width=90pc" alt="Bastion to EC2"></p>
+<p><img alt="Bastion to EC2" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/00010-bastiontoserver.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 <h4 id="update-version-and-install-necessary-software-on-ec2-setup-server">Update Version and Install Necessary Software on EC2 Setup Server</h4>
@@ -1524,7 +1524,7 @@
 sudo yum install php -y
 sudo yum install php-mysqli -y
 sudo yum install mariadb105 -y
-</code></pre><p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0001-installsoftware.png?featherlight=false&amp;width=90pc" alt="Install Software"></p>
+</code></pre><p><img alt="Install Software" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0001-installsoftware.png?featherlight=false&width=90pc"></p>
 <ol start="10">
 <li>Once completed, we will activate these services and configure them to start automatically after system reboot.</li>
 </ol>
@@ -1532,14 +1532,14 @@ sudo yum install mariadb105 -y
 sudo systemctl enable httpd
 sudo systemctl start php-fpm
 sudo systemctl enable php-fpm
-</code></pre><p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0002-installsoftware.png?featherlight=false&amp;width=90pc" alt="Install Software"></p>
+</code></pre><p><img alt="Install Software" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0002-installsoftware.png?featherlight=false&width=90pc"></p>
 <ol start="11">
 <li>Then, we will create some permissions to access the Apache directory.</li>
 </ol>
 <pre tabindex="0"><code>sudo usermod -a -G apache ec2-user
 sudo chown -R ec2-user:apache /var/www/html
 sudo chown -R apache:apache /var/www/html
-</code></pre><p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0003-installsoftware.png?featherlight=false&amp;width=90pc" alt="Install Software"></p>
+</code></pre><p><img alt="Install Software" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0003-installsoftware.png?featherlight=false&width=90pc"></p>
 <h4 id="attach-efs-shared-drive-to-the-web-server">Attach EFS shared drive to the Web server</h4>
 <ol start="12">
 <li>
@@ -1547,7 +1547,7 @@ sudo chown -R apache:apache /var/www/html
 <ul>
 <li>Enter <strong><code>sudo nano /etc/fstab</code></strong></li>
 </ul>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0001-mountefs.png?featherlight=false&amp;width=90pc" alt="Install Software"></p>
+<p><img alt="Install Software" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0001-mountefs.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Append the following line to the end of the file, then save and exit the file.</p>
@@ -1558,16 +1558,16 @@ sudo chown -R apache:apache /var/www/html
 <div class="notices note" ><p>Note: Make sure to replace <strong>fs-061c0cc037d521abf.efs.us-east-1.amazonaws.com</strong> with the DNS of your EFS directory. If you&rsquo;re unsure where to find it, refer to the content at the end of section <a href="http://localhost:1313/vi/4-deployrdsands3/4.5-createefsfilesystem/#dns-name">4.5</a>.</p>
 </div>
 
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0002-mountefs.png?featherlight=false&amp;width=90pc" alt="Install Software"></p>
+<p><img alt="Install Software" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0002-mountefs.png?featherlight=false&width=90pc"></p>
 <ol start="14">
 <li>Finally, we enter the following command once again:</li>
 </ol>
 <pre tabindex="0"><code>sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-061c0cc037d521abf.efs.us-east-1.amazonaws.com:/ /var/www/html/
-</code></pre><p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0003-mountefs.png?featherlight=false&amp;width=90pc" alt="Install Software"></p>
+</code></pre><p><img alt="Install Software" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0003-mountefs.png?featherlight=false&width=90pc"></p>
 <ol start="15">
 <li>
 <p>Checking the result, we can see that the EFS drive has been successfully mounted.</p>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0004-mountefs.png?featherlight=false&amp;width=90pc" alt="Install Software"></p>
+<p><img alt="Install Software" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0004-mountefs.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 
@@ -2296,19 +2296,19 @@ sudo chown -R apache:apache /var/www/html
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1716198918"></script>
-    <script src="/js/perfect-scrollbar.min.js?1716198918"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1716198918"></script>
-    <script src="/js/jquery.sticky.js?1716198918"></script>
-    <script src="/js/featherlight.min.js?1716198918"></script>
-    <script src="/js/highlight.pack.js?1716198918"></script>
+    <script src="/js/clipboard.min.js?1733825059"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733825059"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733825059"></script>
+    <script src="/js/jquery.sticky.js?1733825059"></script>
+    <script src="/js/featherlight.min.js?1733825059"></script>
+    <script src="/js/highlight.pack.js?1733825059"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1716198918"></script>
-    <script src="/js/learn.js?1716198918"></script>
-    <script src="/js/hugo-learn.js?1716198918"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733825059"></script>
+    <script src="/js/learn.js?1733825059"></script>
+    <script src="/js/hugo-learn.js?1733825059"></script>
 
-    <link href="/mermaid/mermaid.css?1716198918" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1716198918"></script>
+    <link href="/mermaid/mermaid.css?1733825059" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733825059"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

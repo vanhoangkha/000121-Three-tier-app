@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Create IAM Role with S3 Policy :: INTRODUCTION TO AMAZON EC2.</title>
 
     
-    <link href="/css/nucleus.css?1716198918" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1716198918" rel="stylesheet">
-    <link href="/css/hybrid.css?1716198918" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1716198918" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1716198918" rel="stylesheet">
-    <link href="/css/auto-complete.css?1716198918" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1716198918" rel="stylesheet">
-    <link href="/css/theme.css?1716198918" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1716198918" rel="stylesheet">
+    <link href="/css/nucleus.css?1733825059" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733825059" rel="stylesheet">
+    <link href="/css/hybrid.css?1733825059" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733825059" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733825059" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733825059" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733825059" rel="stylesheet">
+    <link href="/css/theme.css?1733825059" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733825059" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1716198918" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733825059" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1716198918"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733825059"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1716198918"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1716198918"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733825059"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733825059"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1716198918"></script>
+<script type="text/javascript" src="/js/search.js?1733825059"></script>
 
     
   </div>
@@ -1375,7 +1375,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>23-03-2024</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -1478,7 +1478,7 @@
 <li>Type <strong><code>iam</code></strong></li>
 <li>Under <strong>Services</strong>, select <strong>IAM</strong></li>
 </ul>
-<p><img src="/images/4-DeployRDSAndS3/4.4.-CreateIAMAndS3Policy/0001-createiam.png?featherlight=false&amp;width=90pc" alt="Create IAM Role"></p>
+<p><img alt="Create IAM Role" src="/images/4-DeployRDSAndS3/4.4.-CreateIAMAndS3Policy/0001-createiam.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>In the <strong>Identity and Access Management (IAM)</strong> interface</p>
@@ -1486,20 +1486,20 @@
 <li>Choose <strong>Roles</strong></li>
 <li>Then select <strong>Create role</strong></li>
 </ul>
-<p><img src="/images/4-DeployRDSAndS3/4.4.-CreateIAMAndS3Policy/0002-createiam.png?featherlight=false&amp;width=90pc" alt="Create IAM Role"></p>
+<p><img alt="Create IAM Role" src="/images/4-DeployRDSAndS3/4.4.-CreateIAMAndS3Policy/0002-createiam.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>In the <strong>Select trusted entity</strong> section</p>
 <ul>
 <li>Under <strong>Trusted entity type</strong>, choose <strong>AWS service</strong></li>
 </ul>
-<p><img src="/images/4-DeployRDSAndS3/4.4.-CreateIAMAndS3Policy/0003-createiam.png?featherlight=false&amp;width=90pc" alt="Create IAM Role"></p>
+<p><img alt="Create IAM Role" src="/images/4-DeployRDSAndS3/4.4.-CreateIAMAndS3Policy/0003-createiam.png?featherlight=false&width=90pc"></p>
 <p>Next,</p>
 <ul>
 <li>Under <strong>Service or use case</strong>, select <strong>EC2</strong></li>
 <li>Then click <strong>Next</strong> to proceed</li>
 </ul>
-<p><img src="/images/4-DeployRDSAndS3/4.4.-CreateIAMAndS3Policy/0004-createiam.png?featherlight=false&amp;width=90pc" alt="Create IAM Role"></p>
+<p><img alt="Create IAM Role" src="/images/4-DeployRDSAndS3/4.4.-CreateIAMAndS3Policy/0004-createiam.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>In the <strong>Add permissions</strong> section</p>
@@ -1508,7 +1508,7 @@
 <li>Click on the identified <strong>Policy name</strong></li>
 <li>Then click <strong>Next</strong> to proceed</li>
 </ul>
-<p><img src="/images/4-DeployRDSAndS3/4.4.-CreateIAMAndS3Policy/0005-createiam.png?featherlight=false&amp;width=90pc" alt="Create IAM Role"></p>
+<p><img alt="Create IAM Role" src="/images/4-DeployRDSAndS3/4.4.-CreateIAMAndS3Policy/0005-createiam.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>In the <strong>Name, review, and create</strong> section</p>
@@ -1516,9 +1516,9 @@
 <li>Under <strong>Role name</strong>, enter <strong><code>WS1-IAM-role-S3</code></strong></li>
 <li>Under <strong>Description</strong>, enter <strong><code>Allows EC2 instances to call AWS services on your behalf.</code></strong></li>
 </ul>
-<p><img src="/images/4-DeployRDSAndS3/4.4.-CreateIAMAndS3Policy/0006-createiam.png?featherlight=false&amp;width=90pc" alt="Create IAM Role"></p>
+<p><img alt="Create IAM Role" src="/images/4-DeployRDSAndS3/4.4.-CreateIAMAndS3Policy/0006-createiam.png?featherlight=false&width=90pc"></p>
 <p>Finally, click <strong>Create role</strong> to complete the IAM Role creation.</p>
-<p><img src="/images/4-DeployRDSAndS3/4.4.-CreateIAMAndS3Policy/0008-createiam.png?featherlight=false&amp;width=90pc" alt="Create IAM Role"></p>
+<p><img alt="Create IAM Role" src="/images/4-DeployRDSAndS3/4.4.-CreateIAMAndS3Policy/0008-createiam.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 
@@ -2247,19 +2247,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1716198918"></script>
-    <script src="/js/perfect-scrollbar.min.js?1716198918"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1716198918"></script>
-    <script src="/js/jquery.sticky.js?1716198918"></script>
-    <script src="/js/featherlight.min.js?1716198918"></script>
-    <script src="/js/highlight.pack.js?1716198918"></script>
+    <script src="/js/clipboard.min.js?1733825059"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733825059"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733825059"></script>
+    <script src="/js/jquery.sticky.js?1733825059"></script>
+    <script src="/js/featherlight.min.js?1733825059"></script>
+    <script src="/js/highlight.pack.js?1733825059"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1716198918"></script>
-    <script src="/js/learn.js?1716198918"></script>
-    <script src="/js/hugo-learn.js?1716198918"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733825059"></script>
+    <script src="/js/learn.js?1733825059"></script>
+    <script src="/js/hugo-learn.js?1733825059"></script>
 
-    <link href="/mermaid/mermaid.css?1716198918" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1716198918"></script>
+    <link href="/mermaid/mermaid.css?1733825059" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733825059"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

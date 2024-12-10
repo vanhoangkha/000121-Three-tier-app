@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Create Security Groups :: INTRODUCTION TO AMAZON EC2.</title>
 
     
-    <link href="/css/nucleus.css?1716198918" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1716198918" rel="stylesheet">
-    <link href="/css/hybrid.css?1716198918" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1716198918" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1716198918" rel="stylesheet">
-    <link href="/css/auto-complete.css?1716198918" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1716198918" rel="stylesheet">
-    <link href="/css/theme.css?1716198918" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1716198918" rel="stylesheet">
+    <link href="/css/nucleus.css?1733825059" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733825059" rel="stylesheet">
+    <link href="/css/hybrid.css?1733825059" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733825059" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733825059" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733825059" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733825059" rel="stylesheet">
+    <link href="/css/theme.css?1733825059" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733825059" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1716198918" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733825059" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1716198918"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733825059"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1716198918"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1716198918"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733825059"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733825059"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1716198918"></script>
+<script type="text/javascript" src="/js/search.js?1733825059"></script>
 
     
   </div>
@@ -1375,7 +1375,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>23-03-2024</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -1478,7 +1478,7 @@
 <li>Type <strong><code>ec2</code></strong></li>
 <li>Under <strong>Services</strong>, select <strong>EC2</strong></li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0001-createsg.png?featherlight=false&amp;width=90pc" alt="Create Security Groups"></p>
+<p><img alt="Create Security Groups" src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0001-createsg.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>In the <strong>EC2</strong> dashboard,</p>
@@ -1486,7 +1486,7 @@
 <li>Select <strong>Security Groups</strong></li>
 <li>Click <strong>Create security group</strong></li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0002-createsg.png?featherlight=false&amp;width=90pc" alt="Create Security Groups"></p>
+<p><img alt="Create Security Groups" src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0002-createsg.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Configure the first <strong>Security Group</strong> for the Application Load Balancer (ALB)</p>
@@ -1495,7 +1495,7 @@
 <li>Enter <strong>Description</strong>: <strong><code>This is the security group that we will add to the application load balancer</code></strong></li>
 <li>Select the appropriate <strong>VPC</strong>: <strong>vpc-Oacb9059f41ab5a37 (lamp-stack-vpc)</strong></li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0003-createsg.png?featherlight=false&amp;width=90pc" alt="Create Security Groups"></p>
+<p><img alt="Create Security Groups" src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0003-createsg.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Configure <strong>Inbound rules</strong></p>
@@ -1504,11 +1504,11 @@
 <li>Click <strong>Add rule</strong> to add another rule</li>
 <li>Select <strong>Type</strong>: <strong>HTTPS</strong> and <strong>Source</strong>: <strong>Anywhere-IPv4 (0.0.0.0/0)</strong></li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0004-createsg.png?featherlight=false&amp;width=90pc" alt="Create Security Groups"></p>
+<p><img alt="Create Security Groups" src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0004-createsg.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Review <strong>Outbound rules</strong> and click <strong>Create security group</strong></p>
-<p><img src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0005-createsg.png?featherlight=false&amp;width=90pc" alt="Create Security Groups"></p>
+<p><img alt="Create Security Groups" src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0005-createsg.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 <h4 id="creating-security-groups-for-bastion-host-in-the-public-subnet">Creating Security Groups for Bastion Host in the Public Subnet</h4>
@@ -1520,7 +1520,7 @@
 <li>Enter <strong>Description</strong>: <strong><code>This is the security group that I will use to Bastion to ssh into my EC2 instance in the private subnet</code></strong></li>
 <li>Select the appropriate <strong>VPC</strong>: <strong>vpc-Oacb9059f41ab5a37 (lamp-stack-vpc)</strong></li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0006-createsg.png?featherlight=false&amp;width=90pc" alt="Create Security Groups"></p>
+<p><img alt="Create Security Groups" src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0006-createsg.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Configure <strong>Inbound rules</strong></p>
@@ -1528,7 +1528,7 @@
 <li>Select <strong>Type</strong>: <strong>SSH</strong> and <strong>Source</strong>: <strong>Custom (0.0.0.0/0)</strong></li>
 <li>Review <strong>Outbound rules</strong> and click <strong>Create security group</strong></li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0010-createsg.png?featherlight=false&amp;width=90pc" alt="Create Security Groups"></p>
+<p><img alt="Create Security Groups" src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0010-createsg.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 <h4 id="creating-security-group-for-servers-in-the-private-subnet">Creating Security Group for Servers in the Private Subnet</h4>
@@ -1540,7 +1540,7 @@
 <li>Enter <strong>Description</strong>: <strong><code>This is the security group that we will add to the web servers in the private app subnets</code></strong></li>
 <li>Select the appropriate <strong>VPC</strong>: <strong>vpc-Oacb9059f41ab5a37 (lamp-stack-vpc)</strong></li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0008-createsg.png?featherlight=false&amp;width=90pc" alt="Create Security Groups"></p>
+<p><img alt="Create Security Groups" src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0008-createsg.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Configure <strong>Inbound rules</strong></p>
@@ -1549,11 +1549,11 @@
 <li>Select <strong>Type</strong>: <strong>HTTP</strong> and <strong>Source</strong>: <strong>Custom (sg-027df2808d1cc8947)</strong>. <strong>sg-027df2808d1cc8947</strong> is the ID of ALB Security Group.</li>
 <li>Select <strong>Type</strong>: <strong>HTTPS</strong> and <strong>Source</strong>: <strong>Custom (sg-027f2808d1cc8947)</strong>. <strong>sg-027df2808d1cc8947</strong> is the ID of ALB Security Group.</li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0009-createsg.png?featherlight=false&amp;width=90pc" alt="Create Security Groups"></p>
+<p><img alt="Create Security Groups" src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0009-createsg.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Check <strong>Outbound rules</strong> and select <strong>Create security group</strong>
-<img src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0010-createsg.png?featherlight=false&amp;width=90pc" alt="Create Security Groups"></p>
+<img alt="Create Security Groups" src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0010-createsg.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 <h4 id="creating-security-groups-for-rds-instance">Creating Security Groups for RDS Instance</h4>
@@ -1565,18 +1565,18 @@
 <li>In <strong>Description</strong>, enter <strong><code>This is the security group that I will add to the RDS instance in the private data subnet</code></strong></li>
 <li>For <strong>VPC</strong>, select <strong>vpc-Oacb9059f41ab5a37 (lamp-stack-vpc)</strong></li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0011-createsg.png?featherlight=false&amp;width=90pc" alt="Create Security Groups"></p>
+<p><img alt="Create Security Groups" src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0011-createsg.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Next, configure <strong>Inbound rules</strong>.</p>
 <ul>
 <li>Select <strong>Type</strong>: <strong>MYSQL/Aurora</strong> and <strong>Source</strong>: <strong>Custom (sg-050c7d7dfdd96977c)</strong>. <strong>sg-050c7d7dfdd96977c</strong> is the ID of the Web Server Security Group.</li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0012-createsg.png?featherlight=false&amp;width=90pc" alt="Create Security Groups"></p>
+<p><img alt="Create Security Groups" src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0012-createsg.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Check <strong>Outbound rules</strong> and select <strong>Create security group</strong>
-<img src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0013-createsg.png?featherlight=false&amp;width=90pc" alt="Create Security Groups"></p>
+<img alt="Create Security Groups" src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0013-createsg.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 <h4 id="creating-security-groups-to-allow-nfs-access-to-web-server-processing-in-the-private-subnet">Creating Security Groups to Allow NFS Access to Web Server Processing in the Private Subnet</h4>
@@ -1588,18 +1588,18 @@
 <li>In <strong>Description</strong>, enter <strong><code>Allow NFS access Private App Instances</code></strong></li>
 <li>For <strong>VPC</strong>, select <strong>vpc-Oacb9059f41ab5a37 (lamp-stack-vpc)</strong></li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0016-createsg.png?featherlight=false&amp;width=90pc" alt="Create Security Groups"></p>
+<p><img alt="Create Security Groups" src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0016-createsg.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Next, configure <strong>Inbound rules</strong>.</p>
 <ul>
 <li>Select <strong>Type</strong>: <strong>NFS</strong> and <strong>Source</strong>: <strong>Custom (sg-050c7d7dfdd96977c)</strong>. <strong>sg-050c7d7dfdd96977c</strong> is the ID of the Web Server Security Group.</li>
 </ul>
-<p><img src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0017-createsg.png?featherlight=false&amp;width=90pc" alt="Create Security Groups"></p>
+<p><img alt="Create Security Groups" src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0017-createsg.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Check <strong>Outbound rules</strong> and select <strong>Create security group</strong>
-<img src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0018-createsg.png?featherlight=false&amp;width=90pc" alt="Create Security Groups"></p>
+<img alt="Create Security Groups" src="/images/3-CreateNATGWAndSG/3.3-CreateSecurityGroup/0018-createsg.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 
@@ -2328,19 +2328,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1716198918"></script>
-    <script src="/js/perfect-scrollbar.min.js?1716198918"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1716198918"></script>
-    <script src="/js/jquery.sticky.js?1716198918"></script>
-    <script src="/js/featherlight.min.js?1716198918"></script>
-    <script src="/js/highlight.pack.js?1716198918"></script>
+    <script src="/js/clipboard.min.js?1733825059"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733825059"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733825059"></script>
+    <script src="/js/jquery.sticky.js?1733825059"></script>
+    <script src="/js/featherlight.min.js?1733825059"></script>
+    <script src="/js/highlight.pack.js?1733825059"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1716198918"></script>
-    <script src="/js/learn.js?1716198918"></script>
-    <script src="/js/hugo-learn.js?1716198918"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733825059"></script>
+    <script src="/js/learn.js?1733825059"></script>
+    <script src="/js/hugo-learn.js?1733825059"></script>
 
-    <link href="/mermaid/mermaid.css?1716198918" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1716198918"></script>
+    <link href="/mermaid/mermaid.css?1733825059" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733825059"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

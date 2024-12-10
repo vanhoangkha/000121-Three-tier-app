@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo Cloudfront và Web ACL :: GIỚI THIỆU VỀ AMAZON EC2</title>
 
     
-    <link href="/css/nucleus.css?1716198919" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1716198919" rel="stylesheet">
-    <link href="/css/hybrid.css?1716198919" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1716198919" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1716198919" rel="stylesheet">
-    <link href="/css/auto-complete.css?1716198919" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1716198919" rel="stylesheet">
-    <link href="/css/theme.css?1716198919" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1716198919" rel="stylesheet">
+    <link href="/css/nucleus.css?1733825060" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733825060" rel="stylesheet">
+    <link href="/css/hybrid.css?1733825060" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733825060" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733825060" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733825060" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733825060" rel="stylesheet">
+    <link href="/css/theme.css?1733825060" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733825060" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1716198919" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733825060" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1716198919"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733825060"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1716198919"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1716198919"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733825060"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733825060"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1716198919"></script>
+<script type="text/javascript" src="/js/search.js?1733825060"></script>
 
     
   </div>
@@ -1375,7 +1375,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>23-03-2024</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -1478,14 +1478,14 @@
 <li>Nhập <strong><code>cloudfront</code></strong></li>
 <li>Tại mục <strong>Services</strong> chọn <strong>cloudFront</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0001-createcloudfront.png?featherlight=false&amp;width=90pc" alt="Create CloudFront"></p>
+<p><img alt="Create CloudFront" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0001-createcloudfront.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Tại giao diện <strong>CloudFront</strong></p>
 <ul>
 <li>Chọn <strong>Create a CloudFront distribution</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0002-createcloudfront.png?featherlight=false&amp;width=90pc" alt="Create CloudFront"></p>
+<p><img alt="Create CloudFront" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0002-createcloudfront.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Trong phần <strong>Origin</strong></p>
@@ -1493,11 +1493,11 @@
 <li>Tại mục <strong>Origin domain</strong> chọn <strong>lamp-stack-alb-541405871.us-east-1.elb.amazonaws.com</strong></li>
 <li>Tại mục <strong>Protocol</strong>, chọn <strong>HTTP Only</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0003-createcloudfront.png?featherlight=false&amp;width=90pc" alt="Create CloudFront"></p>
+<p><img alt="Create CloudFront" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0003-createcloudfront.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Các trường thông tin còn lại để mặc định như ảnh</li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0004-createcloudfront.png?featherlight=false&amp;width=90pc" alt="Create CloudFront"></p>
+<p><img alt="Create CloudFront" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0004-createcloudfront.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Trong phần <strong>Default cache behavior</strong></p>
@@ -1506,28 +1506,28 @@
 <li>Tại mục <strong>Viewer protocol policy</strong>, chọn <strong>HTTP and HTTPS</strong></li>
 <li>Tại mục <strong>Allowed HTTP methods</strong>, chọn <strong>GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0005-createcloudfront.png?featherlight=false&amp;width=90pc" alt="Create CloudFront"></p>
+<p><img alt="Create CloudFront" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0005-createcloudfront.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Tại mục <strong>Cache key and origin requests</strong>, chọn <strong>Cache policy and origin request policy (recommended)</strong></li>
 <li>Các trường thông tin còn lại để như ảnh</li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0006-createcloudfront.png?featherlight=false&amp;width=90pc" alt="Create CloudFront"></p>
+<p><img alt="Create CloudFront" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0006-createcloudfront.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Các trường thông tin còn lại để mặc định như ảnh</li>
 <li>Chọn <strong>Create distribution</strong> để hoàn tất việc tạo CloudFront Distribution</li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0007-createcloudfront.png?featherlight=false&amp;width=90pc" alt="Create CloudFront"></p>
+<p><img alt="Create CloudFront" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0007-createcloudfront.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Như vậy chúng ta đã tạo CloudFront Distribution thành công.</p>
 <ul>
 <li>Tại mục <strong>Distribution domain name</strong>, copy nội dung và dán vào trình duyệt.</li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0008-createcloudfront.png?featherlight=false&amp;width=90pc" alt="Create CloudFront"></p>
+<p><img alt="Create CloudFront" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0008-createcloudfront.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Ảnh bên dưới cho thấy ứng dụng Web đã hoạt động với tên miền mới từ CloudFront.</li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0009-createcloudfront.png?featherlight=false&amp;width=90pc" alt="Create CloudFront"></p>
+<p><img alt="Create CloudFront" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0009-createcloudfront.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 <h4 id="tạo-web-acl">Tạo Web ACL</h4>
@@ -1538,7 +1538,7 @@
 <li>Nhập <strong><code>waf</code></strong></li>
 <li>Tại mục <strong>Services</strong> chọn <strong>WAF &amp; Shield</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0001-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0001-createwaf.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Tại giao diện <strong>WAF &amp; Shield</strong></p>
@@ -1546,7 +1546,7 @@
 <li>Chọn <strong>Getting started</strong></li>
 <li>Chọn <strong>Create web ACL</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0002-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0002-createwaf.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Trong phần <strong>Describe web ACL and associate it to AWS resources</strong></p>
@@ -1556,53 +1556,53 @@
 <li>Tại mục <strong>Description - optional</strong>, nhập <strong><code>protect my application</code></strong></li>
 <li>Tại mục <strong>CloudWatch metric name</strong>, nhập <strong><code>bookstore-app</code></strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0003-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0003-createwaf.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Tại mục <strong>Associated AWS resources - optional</strong>, chọn <strong>Add AWS resources</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0004-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0004-createwaf.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Tại mục <strong>Resource type</strong>, chọn <strong>CloudFront Distribution</strong> và chọn Resource chúng ta đã tạo ở bước trước <strong>E2H26TUZ72XRKT - d22fsOdgzskx5x.cloudfront.net</strong></li>
 <li>Chọn <strong>Add</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0005-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0005-createwaf.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Chọn <strong>Next</strong> để qua phần tiếp theo</li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0006-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0006-createwaf.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Trong phần <strong>Add rules and rule groups</strong></p>
 <ul>
 <li>Tại mục <strong>Rules</strong>, chọn <strong>Add rules</strong> và chọn <strong>Add managed rule groups</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0007-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0007-createwaf.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Chọn <strong>AWS managed rule groups</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0008-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0008-createwaf.png?featherlight=false&width=90pc"></p>
 <p>Trong <strong>Free rule groups</strong>, chọn <strong>Add to web ACL</strong> của các phần</p>
 <ul>
 <li><strong>Amazon IP reputation list</strong></li>
 <li><strong>Anonymous IP list</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0009-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0009-createwaf.png?featherlight=false&width=90pc"></p>
 <ul>
 <li><strong>SQL database</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0010-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0010-createwaf.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Chọn <strong>Add rule</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0011-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0011-createwaf.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Các nội dung còn lại để mặc định, chọn <strong>Create web ACL</strong> để hoàn tất việc tạo Web ACL</p>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0014-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0014-createwaf.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Chúng ta đã tạo Web ACL thành công</p>
-<p><img src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0015-createwaf.png?featherlight=false&amp;width=90pc" alt="Create WAF"></p>
+<p><img alt="Create WAF" src="/images/6-DeployApplication/6.6-CreateCloudFrontandWAF/0015-createwaf.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 
@@ -2331,19 +2331,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1716198919"></script>
-    <script src="/js/perfect-scrollbar.min.js?1716198919"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1716198919"></script>
-    <script src="/js/jquery.sticky.js?1716198919"></script>
-    <script src="/js/featherlight.min.js?1716198919"></script>
-    <script src="/js/highlight.pack.js?1716198919"></script>
+    <script src="/js/clipboard.min.js?1733825060"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733825060"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733825060"></script>
+    <script src="/js/jquery.sticky.js?1733825060"></script>
+    <script src="/js/featherlight.min.js?1733825060"></script>
+    <script src="/js/highlight.pack.js?1733825060"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1716198919"></script>
-    <script src="/js/learn.js?1716198919"></script>
-    <script src="/js/hugo-learn.js?1716198919"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733825060"></script>
+    <script src="/js/learn.js?1733825060"></script>
+    <script src="/js/hugo-learn.js?1733825060"></script>
 
-    <link href="/mermaid/mermaid.css?1716198919" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1716198919"></script>
+    <link href="/mermaid/mermaid.css?1733825060" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733825060"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

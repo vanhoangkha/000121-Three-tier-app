@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo Autoscaling Group :: GIỚI THIỆU VỀ AMAZON EC2</title>
 
     
-    <link href="/css/nucleus.css?1716198919" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1716198919" rel="stylesheet">
-    <link href="/css/hybrid.css?1716198919" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1716198919" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1716198919" rel="stylesheet">
-    <link href="/css/auto-complete.css?1716198919" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1716198919" rel="stylesheet">
-    <link href="/css/theme.css?1716198919" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1716198919" rel="stylesheet">
+    <link href="/css/nucleus.css?1733825060" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733825060" rel="stylesheet">
+    <link href="/css/hybrid.css?1733825060" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733825060" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733825060" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733825060" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733825060" rel="stylesheet">
+    <link href="/css/theme.css?1733825060" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733825060" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1716198919" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733825060" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1716198919"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733825060"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1716198919"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1716198919"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733825060"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733825060"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1716198919"></script>
+<script type="text/javascript" src="/js/search.js?1733825060"></script>
 
     
   </div>
@@ -1375,7 +1375,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>23-03-2024</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -1478,7 +1478,7 @@
 <li>Chọn <strong>Auto Scaling Groups</strong></li>
 <li>Chọn <strong>Create Auto Scaling group</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.5-CreateASG/0001-createasg.png?featherlight=false&amp;width=90pc" alt="Create ASG"></p>
+<p><img alt="Create ASG" src="/images/6-DeployApplication/6.5-CreateASG/0001-createasg.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Trong phần <strong>Choose launch template or configuration</strong></p>
@@ -1486,20 +1486,20 @@
 <li>Tại mục <strong>Auto Scaling group name</strong>, nhập <strong><code>bookstore-asg</code></strong></li>
 <li>Tại mục <strong>Launch templaten</strong>, chọn <strong>Bookstore-launch-template</strong> là Template đã tạo ở bước trước</li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.5-CreateASG/0002-createasg.png?featherlight=false&amp;width=90pc" alt="Create ASG"></p>
+<p><img alt="Create ASG" src="/images/6-DeployApplication/6.5-CreateASG/0002-createasg.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Chọn <strong>Next</strong> để sang bước tiếp theo.</li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.5-CreateASG/0003-createasg.png?featherlight=false&amp;width=90pc" alt="Create ASG"></p>
+<p><img alt="Create ASG" src="/images/6-DeployApplication/6.5-CreateASG/0003-createasg.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Trong phần <strong>Choose instance launch options</strong></p>
-<p><img src="/images/6-DeployApplication/6.5-CreateASG/0004-createasg.png?featherlight=false&amp;width=90pc" alt="Create ASG"></p>
+<p><img alt="Create ASG" src="/images/6-DeployApplication/6.5-CreateASG/0004-createasg.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Tại mục <strong>VPC</strong>, chọn <strong>vpc-Oacb9059f41ab5a37 (lamp-stack-vpc)</strong></li>
 <li>Tại mục <strong>Availability Zones and subnets</strong>, chọn <strong>us-east-1a | subnet-05c2f5e92fd59e436 (pri-sub-3а)</strong> và <strong>us-east-1b | subnet-08f6c0fba219ec914 (pri-sub- X4b)</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.5-CreateASG/0005-createasg.png?featherlight=false&amp;width=90pc" alt="Create ASG"></p>
+<p><img alt="Create ASG" src="/images/6-DeployApplication/6.5-CreateASG/0005-createasg.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Chọn <strong>Next</strong> để sang bước tiếp theo.</li>
 </ul>
@@ -1511,37 +1511,37 @@
 <li>Tại mục <strong>Attach to an existing load balancer</strong>, chọn <strong>Choose from your load balancer target groups</strong></li>
 <li>Tại mục <strong>Existing load balancer target groups</strong>, chọn <strong>lamp-stack-tg | HTTP</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.5-CreateASG/0006-createasg.png?featherlight=false&amp;width=90pc" alt="Create ASG"></p>
+<p><img alt="Create ASG" src="/images/6-DeployApplication/6.5-CreateASG/0006-createasg.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Các trường thông tin còn lại để mặc định như ảnh</li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.5-CreateASG/0007-createasg.png?featherlight=false&amp;width=90pc" alt="Create ASG"></p>
+<p><img alt="Create ASG" src="/images/6-DeployApplication/6.5-CreateASG/0007-createasg.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Tại mục <strong>Monitoring</strong>, chọn <strong>Enable group metrics collection within CloudWatch</strong></li>
 <li>Chọn <strong>Next</strong> để sang bước tiếp theo.</li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.5-CreateASG/0008-createasg.png?featherlight=false&amp;width=90pc" alt="Create ASG"></p>
+<p><img alt="Create ASG" src="/images/6-DeployApplication/6.5-CreateASG/0008-createasg.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Trong phần <strong>Configure group size and scaling - optional</strong></p>
 <ul>
 <li>Tại mục <strong>Desired capacity</strong>, nhập <strong><code>2</code></strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.5-CreateASG/0009-createasg.png?featherlight=false&amp;width=90pc" alt="Create ASG"></p>
+<p><img alt="Create ASG" src="/images/6-DeployApplication/6.5-CreateASG/0009-createasg.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Tại mục <strong>Min desired capacity</strong>, nhập <strong><code>2</code></strong></li>
 <li>Tại mục <strong>Max desired capacity</strong>, nhập <strong><code>4</code></strong></li>
 <li>Tại mục <strong>Automatic scaling - optional</strong>, chọn <strong>Target tracking scaling policy</strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.5-CreateASG/0010-createasg.png?featherlight=false&amp;width=90pc" alt="Create ASG"></p>
+<p><img alt="Create ASG" src="/images/6-DeployApplication/6.5-CreateASG/0010-createasg.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Tại mục <strong>Instance warmup</strong>, nhập <strong><code>300</code></strong></li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.5-CreateASG/0011-createasg.png?featherlight=false&amp;width=90pc" alt="Create ASG"></p>
+<p><img alt="Create ASG" src="/images/6-DeployApplication/6.5-CreateASG/0011-createasg.png?featherlight=false&width=90pc"></p>
 <ul>
 <li>Chọn <strong>Next</strong> để sang bước tiếp theo.</li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.5-CreateASG/0012-createasg.png?featherlight=false&amp;width=90pc" alt="Create ASG"></p>
+<p><img alt="Create ASG" src="/images/6-DeployApplication/6.5-CreateASG/0012-createasg.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Trong phần <strong>Add notifications</strong>, chúng ta sẽ thêm một thông báo về sự cố của các Instance trong ứng dụng Web</p>
@@ -1551,7 +1551,7 @@
 <li>Tại mục <strong>Event types</strong>, chọn tất cả các trường thông tin</li>
 <li>Chọn <strong>Next</strong> để sang bước tiếp theo.</li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.5-CreateASG/0013-createasg.png?featherlight=false&amp;width=90pc" alt="Create ASG"></p>
+<p><img alt="Create ASG" src="/images/6-DeployApplication/6.5-CreateASG/0013-createasg.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Trong phần <strong>Add tags - optional</strong></p>
@@ -1564,22 +1564,22 @@
 </li>
 <li>Chọn <strong>Next</strong> để sang bước tiếp theo.</li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.5-CreateASG/0014-createasg.png?featherlight=false&amp;width=90pc" alt="Create ASG"></p>
+<p><img alt="Create ASG" src="/images/6-DeployApplication/6.5-CreateASG/0014-createasg.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Tại phần <strong>Review</strong>, chúng ta sẽ kiểm tra lại lần nửa các thông tin vừa cung cấp</p>
 <ul>
 <li>Chọn <strong>Create Auto Scaling group</strong> để hoàn tất quá trình.</li>
 </ul>
-<p><img src="/images/6-DeployApplication/6.5-CreateASG/0015-createasg.png?featherlight=false&amp;width=90pc" alt="Create ASG"></p>
+<p><img alt="Create ASG" src="/images/6-DeployApplication/6.5-CreateASG/0015-createasg.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Như vậy chúng ta đã tạo Autoscaling Group thành công.</p>
-<p><img src="/images/6-DeployApplication/6.5-CreateASG/0016-createasg.png?featherlight=false&amp;width=90pc" alt="Create ASG"></p>
+<p><img alt="Create ASG" src="/images/6-DeployApplication/6.5-CreateASG/0016-createasg.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Truy cập vào giao diện <strong>EC2 Instance</strong> chúng ta thấy 2 máy chủ ứng dụng Web đang hoạt động</p>
-<p><img src="/images/6-DeployApplication/6.5-CreateASG/0017-createasg.png?featherlight=false&amp;width=90pc" alt="Create ASG"></p>
+<p><img alt="Create ASG" src="/images/6-DeployApplication/6.5-CreateASG/0017-createasg.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 
@@ -2308,19 +2308,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1716198919"></script>
-    <script src="/js/perfect-scrollbar.min.js?1716198919"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1716198919"></script>
-    <script src="/js/jquery.sticky.js?1716198919"></script>
-    <script src="/js/featherlight.min.js?1716198919"></script>
-    <script src="/js/highlight.pack.js?1716198919"></script>
+    <script src="/js/clipboard.min.js?1733825060"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733825060"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733825060"></script>
+    <script src="/js/jquery.sticky.js?1733825060"></script>
+    <script src="/js/featherlight.min.js?1733825060"></script>
+    <script src="/js/highlight.pack.js?1733825060"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1716198919"></script>
-    <script src="/js/learn.js?1716198919"></script>
-    <script src="/js/hugo-learn.js?1716198919"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733825060"></script>
+    <script src="/js/learn.js?1733825060"></script>
+    <script src="/js/hugo-learn.js?1733825060"></script>
 
-    <link href="/mermaid/mermaid.css?1716198919" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1716198919"></script>
+    <link href="/mermaid/mermaid.css?1733825060" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733825060"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

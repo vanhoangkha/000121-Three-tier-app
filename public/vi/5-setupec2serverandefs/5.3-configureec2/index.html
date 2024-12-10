@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Cấu hình cho EC2 Setup Server :: GIỚI THIỆU VỀ AMAZON EC2</title>
 
     
-    <link href="/css/nucleus.css?1716198918" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1716198918" rel="stylesheet">
-    <link href="/css/hybrid.css?1716198918" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1716198918" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1716198918" rel="stylesheet">
-    <link href="/css/auto-complete.css?1716198918" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1716198918" rel="stylesheet">
-    <link href="/css/theme.css?1716198918" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1716198918" rel="stylesheet">
+    <link href="/css/nucleus.css?1733825060" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733825060" rel="stylesheet">
+    <link href="/css/hybrid.css?1733825060" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733825060" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733825060" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733825060" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733825060" rel="stylesheet">
+    <link href="/css/theme.css?1733825060" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733825060" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1716198918" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733825060" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1716198918"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733825060"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1716198918"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1716198918"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733825060"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733825060"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1716198918"></script>
+<script type="text/javascript" src="/js/search.js?1733825060"></script>
 
     
   </div>
@@ -1375,7 +1375,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>23-03-2024</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -1478,28 +1478,28 @@
 <li>Chọn <strong>EC2 Instance Connect</strong></li>
 <li>Sau đó chọn <strong>Connect</strong></li>
 </ul>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0001-bastiontoserver.png?featherlight=false&amp;width=90pc" alt="Bastion to EC2"></p>
+<p><img alt="Bastion to EC2" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0001-bastiontoserver.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Chúng ta thấy đã truy cập vào Bastion Host thành công</p>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0002-bastiontoserver.png?featherlight=false&amp;width=90pc" alt="Bastion to EC2"></p>
+<p><img alt="Bastion to EC2" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0002-bastiontoserver.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Nhập <strong><code>ping google.com</code></strong> để kiểm tra kết nối mạng internet, kết quả như ảnh</p>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0003-bastiontoserver.png?featherlight=false&amp;width=90pc" alt="Bastion to EC2"></p>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0004-bastiontoserver.png?featherlight=false&amp;width=90pc" alt="Bastion to EC2"></p>
+<p><img alt="Bastion to EC2" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0003-bastiontoserver.png?featherlight=false&width=90pc"></p>
+<p><img alt="Bastion to EC2" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0004-bastiontoserver.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Nhập <strong><code>sudo nano ssh-key.pem</code></strong>, chúng ta sẽ tạo SSH Key để truy cập vào EC2 Setup Server.</p>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0005-bastiontoserver.png?featherlight=false&amp;width=90pc" alt="Bastion to EC2"></p>
+<p><img alt="Bastion to EC2" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0005-bastiontoserver.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Nội dung trong file <strong>ssh-key.pem</strong> sẽ nằm trong file key-pair mà chúng ta đã chọn trong lúc tạo EC2 Setup Server. Chúng ta sẽ copy vào đây, sau đó lưu và thoát truy cập file.</p>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0006-bastiontoserver.png?featherlight=false&amp;width=90pc" alt="Bastion to EC2"></p>
+<p><img alt="Bastion to EC2" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0006-bastiontoserver.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Nhập <strong><code>sudo chmod 400 ssh-key.pem</code></strong> để được phép đọc nội dung của tệp này, nhưng không cho phép ghi hoặc thực thi.</p>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0008-bastiontoserver.png?featherlight=false&amp;width=90pc" alt="Bastion to EC2"></p>
+<p><img alt="Bastion to EC2" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0008-bastiontoserver.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Cuối cùng nhập <strong><code>sudo &quot;ssh-key.pem&quot; ec2-user@10.0.3.239</code></strong> để truy cập vào EC2 Setup Server.</p>
@@ -1509,11 +1509,11 @@
 <div class="notices note" ><p>Lưu ý: <strong>10.0.3.239</strong> là địa chỉ private IPv4 của EC2 Setup Server. Vì vậy bạn hãy thay địa chỉ đó của bạn vào nhé!</p>
 </div>
 
-<img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0009-bastiontoserver.png?featherlight=false&amp;width=90pc" alt="Bastion to EC2"></p>
+<img alt="Bastion to EC2" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0009-bastiontoserver.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>
 <p>Nhập <strong><code>ping google.com</code></strong> để kiểm tra kết nối mạng internet, kết quả như ảnh</p>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/00010-bastiontoserver.png?featherlight=false&amp;width=90pc" alt="Bastion to EC2"></p>
+<p><img alt="Bastion to EC2" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/00010-bastiontoserver.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 <h4 id="cập-nhật-phiên-bản-và-cài-phần-mềm-cần-thiết-trên-ec2-setup-server">Cập nhật phiên bản và cài phần mềm cần thiết trên EC2 Setup Server</h4>
@@ -1524,7 +1524,7 @@
 sudo yum install php -y
 sudo yum install php-mysqli -y
 sudo yum install mariadb105 -y
-</code></pre><p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0001-installsoftware.png?featherlight=false&amp;width=90pc" alt="Install Software"></p>
+</code></pre><p><img alt="Install Software" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0001-installsoftware.png?featherlight=false&width=90pc"></p>
 <ol start="10">
 <li>Sau khi hoàn tất, chúng ta sẽ kích hoạt các dịch vụ này và định cấu hình để chúng tự động khởi động sau khi hệ thống khởi động lại.</li>
 </ol>
@@ -1532,14 +1532,14 @@ sudo yum install mariadb105 -y
 sudo systemctl enable httpd
 sudo systemctl start php-fpm
 sudo systemctl enable php-fpm
-</code></pre><p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0002-installsoftware.png?featherlight=false&amp;width=90pc" alt="Install Software"></p>
+</code></pre><p><img alt="Install Software" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0002-installsoftware.png?featherlight=false&width=90pc"></p>
 <ol start="11">
 <li>Sau đó, chúng tôi sẽ tạo một số permits để truy cập thư mục Apache.</li>
 </ol>
 <pre tabindex="0"><code>sudo usermod -a -G apache ec2-user
 sudo chown -R ec2-user:apache /var/www/html
 sudo chown -R apache:apache /var/www/html
-</code></pre><p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0003-installsoftware.png?featherlight=false&amp;width=90pc" alt="Install Software"></p>
+</code></pre><p><img alt="Install Software" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0003-installsoftware.png?featherlight=false&width=90pc"></p>
 <h4 id="gắn-efs-shared-drive-vào-máy-chủ-web">Gắn EFS shared drive vào máy chủ Web</h4>
 <ol start="12">
 <li>
@@ -1547,7 +1547,7 @@ sudo chown -R apache:apache /var/www/html
 <ul>
 <li>Nhập <strong><code>sudo nano /etc/fstab</code></strong></li>
 </ul>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0001-mountefs.png?featherlight=false&amp;width=90pc" alt="Install Software"></p>
+<p><img alt="Install Software" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0001-mountefs.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>Nối dòng sau vào cuối tệp sau đó lưu và thoát tệp</p>
@@ -1558,16 +1558,16 @@ sudo chown -R apache:apache /var/www/html
 <div class="notices note" ><p>Lưu ý: Đảm bảo thay thế <strong>fs-061c0cc037d521abf.efs.us-east-1.amazonaws.com</strong> bằng DNS của thư mục EFS của bạn. Nếu bạn không chắc chắn tìm thấy nó ở đâu, hãy tham khảo nội dung cuối của phần <a href="http://localhost:1313/vi/4-deployrdsands3/4.5-createefsfilesystem/#dns-name">4.5</a></p>
 </div>
 
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0002-mountefs.png?featherlight=false&amp;width=90pc" alt="Install Software"></p>
+<p><img alt="Install Software" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0002-mountefs.png?featherlight=false&width=90pc"></p>
 <ol start="14">
 <li>Cuối cùng, chúng ta nhập lệnh sau đây một lần nửa</li>
 </ol>
 <pre tabindex="0"><code>sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-061c0cc037d521abf.efs.us-east-1.amazonaws.com:/ /var/www/html/
-</code></pre><p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0003-mountefs.png?featherlight=false&amp;width=90pc" alt="Install Software"></p>
+</code></pre><p><img alt="Install Software" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0003-mountefs.png?featherlight=false&width=90pc"></p>
 <ol start="15">
 <li>
 <p>Kiểm tra kết quả, chúng ta thấy ổ đĩa EFS đã gắn vào thành công</p>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0004-mountefs.png?featherlight=false&amp;width=90pc" alt="Install Software"></p>
+<p><img alt="Install Software" src="/images/5-SetupEc2ServerAndEFS/5.3-ConfigureEC2/0004-mountefs.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 
@@ -2296,19 +2296,19 @@ sudo chown -R apache:apache /var/www/html
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1716198919"></script>
-    <script src="/js/perfect-scrollbar.min.js?1716198919"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1716198919"></script>
-    <script src="/js/jquery.sticky.js?1716198919"></script>
-    <script src="/js/featherlight.min.js?1716198919"></script>
-    <script src="/js/highlight.pack.js?1716198919"></script>
+    <script src="/js/clipboard.min.js?1733825060"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733825060"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733825060"></script>
+    <script src="/js/jquery.sticky.js?1733825060"></script>
+    <script src="/js/featherlight.min.js?1733825060"></script>
+    <script src="/js/highlight.pack.js?1733825060"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1716198919"></script>
-    <script src="/js/learn.js?1716198919"></script>
-    <script src="/js/hugo-learn.js?1716198919"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733825060"></script>
+    <script src="/js/learn.js?1733825060"></script>
+    <script src="/js/hugo-learn.js?1733825060"></script>
 
-    <link href="/mermaid/mermaid.css?1716198919" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1716198919"></script>
+    <link href="/mermaid/mermaid.css?1733825060" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733825060"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

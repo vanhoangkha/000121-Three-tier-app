@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Update Database to RDS Instance :: INTRODUCTION TO AMAZON EC2.</title>
 
     
-    <link href="/css/nucleus.css?1716198918" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1716198918" rel="stylesheet">
-    <link href="/css/hybrid.css?1716198918" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1716198918" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1716198918" rel="stylesheet">
-    <link href="/css/auto-complete.css?1716198918" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1716198918" rel="stylesheet">
-    <link href="/css/theme.css?1716198918" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1716198918" rel="stylesheet">
+    <link href="/css/nucleus.css?1733825059" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733825059" rel="stylesheet">
+    <link href="/css/hybrid.css?1733825059" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733825059" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733825059" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733825059" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733825059" rel="stylesheet">
+    <link href="/css/theme.css?1733825059" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733825059" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1716198918" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1733825059" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1716198918"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733825059"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1716198918"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1716198918"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733825059"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733825059"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1716198918"></script>
+<script type="text/javascript" src="/js/search.js?1733825059"></script>
 
     
   </div>
@@ -1375,7 +1375,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>23-03-2024</font></i>
+        <i><font color=orange>10-12-2024</font></i>
     </left>
     <left>
         <br>
@@ -1474,7 +1474,7 @@
 <ol>
 <li>
 <p>First, we need to go to the <strong>Amazon RDS</strong> interface, access the Database of the application, and copy the <strong>Endpoint</strong> as shown in the image below:</p>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.5-UpdateDBtoRDSInstance/0001-update-db.png?featherlight=false&amp;width=90pc" alt="Update Database"></p>
+<p><img alt="Update Database" src="/images/5-SetupEc2ServerAndEFS/5.5-UpdateDBtoRDSInstance/0001-update-db.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
 <p>In the EC2 Setup Server, we will access RDS to update the Database using the following command:</p>
@@ -1485,12 +1485,12 @@
 <div class="notices note" ><p>Note: <strong>book-rds-database.corloppcovr8.us-east-1.rds.amazonaws.com</strong> is your <strong>RDS endpoint</strong> that you copied in step 1.</p>
 </div>
 
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.5-UpdateDBtoRDSInstance/0002-update-db.png?featherlight=false&amp;width=90pc" alt="Update Database"></p>
+<p><img alt="Update Database" src="/images/5-SetupEc2ServerAndEFS/5.5-UpdateDBtoRDSInstance/0002-update-db.png?featherlight=false&width=90pc"></p>
 <ol start="3">
 <li>Enter the command to check all existing databases. We can see <strong>e_bookstore</strong> is the database of the application that we created earlier during the RDS Instance setup.</li>
 </ol>
 <pre tabindex="0"><code>show databases;
-</code></pre><p><img src="/images/5-SetupEc2ServerAndEFS/5.5-UpdateDBtoRDSInstance/0003-update-db.png?featherlight=false&amp;width=90pc" alt="Update Database"></p>
+</code></pre><p><img alt="Update Database" src="/images/5-SetupEc2ServerAndEFS/5.5-UpdateDBtoRDSInstance/0003-update-db.png?featherlight=false&width=90pc"></p>
 <ol start="4">
 <li>Next, we will select this database to work on it by entering the command:</li>
 </ol>
@@ -1499,17 +1499,17 @@
 <li>We will execute SQL statements from the file <strong>CreateDB.sql</strong> located at <strong>/var/www/html/sql/</strong> into the RDS. The <strong>CreateDB.sql</strong> file will create tables, indexes, and procedures.</li>
 </ol>
 <pre tabindex="0"><code>SOURCE /var/www/html/sql/CreateDB.sql
-</code></pre><p><img src="/images/5-SetupEc2ServerAndEFS/5.5-UpdateDBtoRDSInstance/0005-update-db.png?featherlight=false&amp;width=90pc" alt="Update Database"></p>
+</code></pre><p><img alt="Update Database" src="/images/5-SetupEc2ServerAndEFS/5.5-UpdateDBtoRDSInstance/0005-update-db.png?featherlight=false&width=90pc"></p>
 <ol start="6">
 <li>Proceed to execute SQL statements from the file <strong>insertDB.sql</strong> located at <strong>/var/www/html/sql/</strong>. The <strong>insertDB.sql</strong> file inserts new records into existing tables in the database.</li>
 </ol>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.5-UpdateDBtoRDSInstance/0006-update-db.png?featherlight=false&amp;width=90pc" alt="Update Database"></p>
+<p><img alt="Update Database" src="/images/5-SetupEc2ServerAndEFS/5.5-UpdateDBtoRDSInstance/0006-update-db.png?featherlight=false&width=90pc"></p>
 <h4 id="configuring-the-db_connphp-file">Configuring the db_conn.php file</h4>
 <ol start="7">
 <li>In the EC2 Setup Server, we will access the <strong>db_conn.php</strong> file in the Source code downloaded from S3. Navigate to the directory <strong>/var/www/html</strong> and enter:</li>
 </ol>
 <pre tabindex="0"><code>sudo nano db_conn.php
-</code></pre><p><img src="/images/5-SetupEc2ServerAndEFS/5.5-UpdateDBtoRDSInstance/0007-update-db.png?featherlight=false&amp;width=90pc" alt="Update Database"></p>
+</code></pre><p><img alt="Update Database" src="/images/5-SetupEc2ServerAndEFS/5.5-UpdateDBtoRDSInstance/0007-update-db.png?featherlight=false&width=90pc"></p>
 <ol start="8">
 <li>Edit the values as follows:</li>
 </ol>
@@ -1519,7 +1519,7 @@
 <li>At the variable <strong>pass</strong> with the value <strong><code>12345678</code></strong> which is your password.</li>
 <li>At the variable <strong>db_name</strong> with the value <strong><code>e_bookstore</code></strong> which is the database of the application.</li>
 </ul>
-<p><img src="/images/5-SetupEc2ServerAndEFS/5.5-UpdateDBtoRDSInstance/0008-update-db.png?featherlight=false&amp;width=90pc" alt="Update Database"></p>
+<p><img alt="Update Database" src="/images/5-SetupEc2ServerAndEFS/5.5-UpdateDBtoRDSInstance/0008-update-db.png?featherlight=false&width=90pc"></p>
 <p>Then save and exit the file.</p>
 
 
@@ -2247,19 +2247,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1716198918"></script>
-    <script src="/js/perfect-scrollbar.min.js?1716198918"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1716198918"></script>
-    <script src="/js/jquery.sticky.js?1716198918"></script>
-    <script src="/js/featherlight.min.js?1716198918"></script>
-    <script src="/js/highlight.pack.js?1716198918"></script>
+    <script src="/js/clipboard.min.js?1733825059"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733825059"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733825059"></script>
+    <script src="/js/jquery.sticky.js?1733825059"></script>
+    <script src="/js/featherlight.min.js?1733825059"></script>
+    <script src="/js/highlight.pack.js?1733825059"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1716198918"></script>
-    <script src="/js/learn.js?1716198918"></script>
-    <script src="/js/hugo-learn.js?1716198918"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733825059"></script>
+    <script src="/js/learn.js?1733825059"></script>
+    <script src="/js/hugo-learn.js?1733825059"></script>
 
-    <link href="/mermaid/mermaid.css?1716198918" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1716198918"></script>
+    <link href="/mermaid/mermaid.css?1733825059" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1733825059"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
