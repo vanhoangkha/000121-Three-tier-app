@@ -1,6 +1,6 @@
 ---
 title: "Triển khai cơ sở dữ liệu và dịch vụ lưu trữ"
-date: "`r Sys.Date()`"
+date: 2024-01-01
 weight: 4
 chapter: false
 pre: " <b> 4. </b> "

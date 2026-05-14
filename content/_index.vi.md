@@ -1,6 +1,6 @@
 ---
 title: "Xây dựng kiến trúc 3 tầng triển khai ứng dụng LAMP STACK trên AWS"
-date: "`r Sys.Date()`"
+date: 2024-01-01
 weight: 1
 chapter: false
 ---

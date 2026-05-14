@@ -1,6 +1,6 @@
 ---
 title: "Create 6 Subnets"
-date: "`r Sys.Date()`"
+date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 2.3.1 </b> "
