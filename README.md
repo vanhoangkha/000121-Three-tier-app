@@ -1,4 +1,4 @@
-# 🏗️ Three-Tier Application
+# Three-Tier Application
 
 Build a three-tier web application architecture on AWS.
 
@@ -8,7 +8,7 @@ This is a hands-on workshop from the **AWS First Cloud Journey** series.
 
 ## Workshop
 
-📖 **[Start the workshop](https://vanhoangkha.github.io/000121-Three-tier-app/)**
+**[Start the workshop](https://vanhoangkha.github.io/000121-Three-tier-app/)**
 
 ## Prerequisites
 
